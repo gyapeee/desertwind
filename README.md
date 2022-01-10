@@ -7,7 +7,8 @@ Facelifting of old DesertWind game
 - Backend 
   - Java spring boot
 - DB
-  - SQL(MySQL or Postgre)
-
+  - SQL(MySQL or Postgre?) - @gyapeee
+- CI
+  - GitHub CI pipeline? - @johnny
 
 
