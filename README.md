@@ -7,9 +7,9 @@ Facelifting of old DesertWind game
 - Backend 
   - Java spring boot
 - DB
-  - SQL(MySQL or Postgre?) - @gyapeee
+  - SQL(MySQL)
 - CI
-  - GitHub CI pipeline? - @johnny
+  - GitHub CI pipeline?
 
 #Process
 - Branching strategy
