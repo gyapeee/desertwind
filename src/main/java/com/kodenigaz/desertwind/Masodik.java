@@ -4,6 +4,7 @@ package com.kodenigaz.desertwind;
 class Masodik extends Jelenet {
     int verzio = 0; // Minden helyszíni classnak több verzioja lehet, ezt a verziot az adott parancs értelmező modosíthatja!
 
+    private static final String IRANY_ESZAK = "é";
     void szoveg() {
         switch (verzio) {
             case (0):
@@ -23,7 +24,7 @@ class Masodik extends Jelenet {
 
     void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
-            case "é": {
+            case IRANY_ESZAK: {
                 System.out.println("Elindulsz északnak!");
                 DesertWind.jelenetszam = 3;
                 verzio = 1;
