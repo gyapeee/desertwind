@@ -8,16 +8,10 @@ class Masodik extends Jelenet {
     void szoveg() {
         switch (verzio) {
             case (0):
-                System.out.println("Álmosan kelsz fel. A Nap még fel se jőtt az égre, de neked");
-                System.out.println("már dolgoznpd kell. Zörgetnek az ajtódon. Sietned kell, vagy újra");
-                System.out.println("fogolytáborba jutsz, és  azt biztosan nem éled túl. 30 évet robotoltál");
-                System.out.println("már az uralkodó szolgálatában, de érzed, erőd elhagyott. Ez pedig azt");
-                System.out.println("jelenti, nemsokára megválnak tőled.");
-                System.out.println("De most nincs időd erre. Menned kell a munkára.");
-                System.out.println("Az ajtó észak felé van.");
+                System.out.println(StringValues.MASODIK_SZOVEG_0);
                 break;
             case (1):
-                System.out.println("Már jártál itt. Nincs sok időd tovább ténferegni otthon!!!");
+                System.out.println(StringValues.MASODIK_SZOVEG_1);
                 break;
         }
     }
@@ -25,36 +19,34 @@ class Masodik extends Jelenet {
     void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case IRANY_ESZAK: {
-                System.out.println("Elindulsz északnak!");
+                System.out.println(StringValues.ESZAK);
                 DesertWind.jelenetszam = 3;
                 verzio = 1;
                 break;
             }
             case "k": {
-                System.out.println("Elindulsz keletnek! Falnak ütközöl!");
+                System.out.println(StringValues.MASODIK_K);
                 break;
             }
             case "d": {
-                System.out.println("Elindulsz délnek! Falnak ütközöl!");
+                System.out.println(StringValues.MASODIK_D);
                 break;
             }
             case "n": {
-                System.out.println("Elindulsz nyugatnak! Falnak ütközöl!");
+                System.out.println(StringValues.MASODIK_N);
                 break;
             }
             case "vár": {
-                System.out.println("Hát ezt nem kellett volna. A katonák betőrik az ajtódat, hogy megnézzék, mért");
-                System.out.println("nem jőssz már. Mikor meglátnak ott lustálkodni, talpra  állítanak és  ");
-                System.out.println("kivonszolnak. A helyszínen agyonlőnek.");
+                System.out.println(StringValues.MASODIK_VAR);
                 DesertWind.jelenetszam = 1;
                 break;
             }
             case "ker": {
                 if (DesertWind.targyak.contains("bögre")) {
-                    System.out.println("Nem találsz semmi érdekeset!");
+                    System.out.println(StringValues.MASODIK_KER_BOGRE_0);
                     break;
                 } else {
-                    System.out.println("Nagy keresésed közben találtál egy bögrét");
+                    System.out.println(StringValues.MASODIK_KER_BOGRE_1);
                     DesertWind.targyak.add("bögre");
                     break;
                 }
@@ -63,11 +55,11 @@ class Masodik extends Jelenet {
                 if (parancs.contains("használ")) {
                     if (parancs.contains("bögre")) {
                         if (DesertWind.targyak.contains("bögre")) {
-                            System.out.println("Jobb hijján fejbe vered magad a bögréddel, ami így eltörik és lesz egy törött bögréd.");
+                            System.out.println(StringValues.OTODIK_BOGRE_0);
                             DesertWind.targyak.remove("bögre");
                             DesertWind.targyak.add("törött bögre");
                         } else {
-                            System.out.println("Nincs nálad ép bögre!");
+                            System.out.println(StringValues.OTODIK_BOGRE_1);
                         }
                     }
                 }
