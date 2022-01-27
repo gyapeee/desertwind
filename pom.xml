@@ -28,6 +28,7 @@
                     <version>3.8.0</version>
                     <configuration>
                         <release>11</release>
+                        <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
             </plugins>
