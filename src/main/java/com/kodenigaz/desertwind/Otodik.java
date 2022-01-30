@@ -6,13 +6,13 @@ class Otodik extends Jelenet {
     void szoveg() {
         switch (verzio) {
             case (0):
-                System.out.println("Az országút közepén  állsz. Észak felé vannak a szántóföldek, délre a falu. Nyugatra és keletre folytatódik a végtelen aszfalt.");
+                System.out.println(StringValues.OTODIK_SZOVEG_0);
                 if (!(DesertWind.targyak.contains("gyűrű"))) {
-                    System.out.println("Valami fénylő tárgyat látsz tőled 10 méterre.");
+                    System.out.println(StringValues.OTODIK_GYURU);
                 }
                 break;
             case (1):
-                System.out.println("Már jártál itt. Nincs sok időd tovább ténferegni otthon!!!");
+                System.out.println(StringValues.OTODIK_SZOVEG_1);
                 break;
         }
     }
@@ -20,37 +20,35 @@ class Otodik extends Jelenet {
     void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case "é": {
-                System.out.println("Elindulsz északnak!");
+                System.out.println(StringValues.ESZAK);
                 DesertWind.jelenetszam = 4;
                 break;
             }
             case "k": {
-                System.out.println("Elindulsz keletnek!");
+                System.out.println(StringValues.KELET);
                 //com.kodenigaz.desertwind.DesertWind.jelenetszam = 8;
                 break;
             }
             case "d": {
-                System.out.println("Elindulsz délnek!");
+                System.out.println(StringValues.DEL);
                 DesertWind.jelenetszam = 6;
                 break;
             }
             case "n": {
-                System.out.println("Elindulsz nyugatnak! Pár óra gyaloglás után inkább visszafordulsz!");
+                System.out.println(StringValues.OTODIK_N);
                 break;
             }
             case "vár": {
-                System.out.println("Hát ezt nem kellett volna. A katonák betőrik az ajtódat, hogy megnézzék, mért");
-                System.out.println("nem jőssz már. Mikor meglátnak ott lustálkodni, talpra  állítanak és  ");
-                System.out.println("kivonszolnak. A helyszínen agyonlőnek.");
+                System.out.println(StringValues.OTODIK_VAR);
                 DesertWind.jelenetszam = 1;
                 break;
             }
             case "ker": {
                 if (DesertWind.targyak.contains("gyűrű")) {
-                    System.out.println("Nem találsz semmi érdekeset!");
+                    System.out.println(StringValues.OTODIK_KER_GYURU);
                     break;
                 } else {
-                    System.out.println("Egy gyűrűt találtál. Jobban megnézve észreveszed, hogy rá van vésve: For the glory of the FoD!! Fogalmad sincs hogy ez mit jelenthet, de azért elteszed.");
+                    System.out.println(StringValues.OTODIK_KER);
                     DesertWind.targyak.add("gyűrű");
                     break;
                 }
@@ -59,11 +57,11 @@ class Otodik extends Jelenet {
                 if (parancs.contains("használ")) {
                     if (parancs.contains("bögre")) {
                         if (DesertWind.targyak.contains("bögre")) {
-                            System.out.println("Jobb hijján fejbe vered magad a bögréddel, ami így eltörik és lesz egy törött bögréd.");
+                            System.out.println(StringValues.OTODIK_BOGRE_0);
                             DesertWind.targyak.remove("bögre");
                             DesertWind.targyak.add("törött bögre");
                         } else {
-                            System.out.println("Nincs nálad ép bögre!");
+                            System.out.println(StringValues.OTODIK_BOGRE_1);
                         }
                     }
                 }

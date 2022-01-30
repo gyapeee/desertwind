@@ -18,7 +18,7 @@ public class DesertWind {
         SpringApplication.run(DesertWind.class, args);
         UI Felulet =
                 new UI(); //Felulet object fogja megjeleniteni a megfelelő függvényeivel a helyszínt, bekérni a parancsot és értelmezni a parancsot
-        System.out.println("Elkezdődik a kaland, ez az első helyszín..."); //Egyszer majd lesz rendes intro ... :)
+        System.out.println(StringValues.KEZDODIK); //Egyszer majd lesz rendes intro ... :)
         do {
             Felulet.megjelenito(
                     jelenetszam);  // Megjeleníti az adott helyszín alap szövegét, itt bele kell még kódolni, hogy létezhet olyan hogy változik a helyszín leírása amikor visszamegyünk
