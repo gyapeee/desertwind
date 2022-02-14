@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/desertwind.iml" filepath="$PROJECT_DIR$/.idea/desertwind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desertwind.iml" filepath="$PROJECT_DIR$/desertwind.iml" />
     </modules>
   </component>
 </project>
