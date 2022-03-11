@@ -72,6 +72,10 @@ public final class TortenetSzoveg {
     public static final String OTODIK_BOGRE_1 = "Nincs nálad ép bögre!";
 
     public static final String HATODIK_K_NY = "Utadat  állják a házak";
-    public static final String HALAL = "Sajnos meghaltál. Játékod itt véget ér.";
+    public static final String HALAL = "Ahogy kéred" + System.lineSeparator() + "Sajnos meghaltál. Játékod itt véget ér.";
+    public static final String MIT_TESZEL = "Mit teszel?";
+    public static final String HELP_NINCS_IRANYITAS = "Te most segítséget kértél a játék irányításában. Egyelőre sajnos nem lehet irányitani....";
+    public static final String NALAD_LEVO_TARGYAK = "Nálad lévő tárgyak: ";
+
 
 }

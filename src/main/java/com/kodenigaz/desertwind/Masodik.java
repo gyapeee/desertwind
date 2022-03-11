@@ -3,6 +3,8 @@ package com.kodenigaz.desertwind;
 import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
 import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_3;
 import static com.kodenigaz.desertwind.Parancs.*;
+import static com.kodenigaz.desertwind.Targyak.BOGRE;
+import static com.kodenigaz.desertwind.Targyak.TOROTT_BOGRE;
 
 // 2
 class Masodik extends Jelenet {
@@ -47,22 +49,22 @@ class Masodik extends Jelenet {
                 break;
             }
             case KERES: {
-                if (DesertWind.targyak.contains("bögre")) {
+                if (DesertWind.targyak.contains(BOGRE)) {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_0);
                     break;
                 } else {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_1);
-                    DesertWind.targyak.add("bögre");
+                    DesertWind.targyak.add(BOGRE);
                     break;
                 }
             }
             default: {
-                if (parancs.contains("használ")) {
-                    if (parancs.contains("bögre")) {
-                        if (DesertWind.targyak.contains("bögre")) {
+                if (parancs.contains(HASZNAL)) {
+                    if (parancs.contains(BOGRE)) {
+                        if (DesertWind.targyak.contains(BOGRE)) {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
-                            DesertWind.targyak.remove("bögre");
-                            DesertWind.targyak.add("törött bögre");
+                            DesertWind.targyak.remove(BOGRE);
+                            DesertWind.targyak.add(TOROTT_BOGRE);
                         } else {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }

@@ -1,8 +1,8 @@
 package com.kodenigaz.desertwind;
 
 import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.*;
-import static com.kodenigaz.desertwind.Parancs.KERES;
-import static com.kodenigaz.desertwind.Parancs.VARAKOZIK;
+import static com.kodenigaz.desertwind.Parancs.*;
+import static com.kodenigaz.desertwind.Targyak.*;
 
 class Otodik extends Jelenet {
     int verzio = 0;
@@ -12,7 +12,7 @@ class Otodik extends Jelenet {
         switch (verzio) {
             case (0):
                 System.out.println(TortenetSzoveg.OTODIK_SZOVEG_0);
-                if (!(DesertWind.targyak.contains("gyűrű"))) {
+                if (!(DesertWind.targyak.contains(GYURU))) {
                     System.out.println(TortenetSzoveg.OTODIK_GYURU);
                 }
                 break;
@@ -50,22 +50,22 @@ class Otodik extends Jelenet {
                 break;
             }
             case KERES: {
-                if (DesertWind.targyak.contains("gyűrű")) {
+                if (DesertWind.targyak.contains(GYURU)) {
                     System.out.println(TortenetSzoveg.OTODIK_KER_GYURU);
                     break;
                 } else {
                     System.out.println(TortenetSzoveg.OTODIK_KER);
-                    DesertWind.targyak.add("gyűrű");
+                    DesertWind.targyak.add(GYURU);
                     break;
                 }
             }
             default: {
-                if (parancs.contains("használ")) {
-                    if (parancs.contains("bögre")) {
-                        if (DesertWind.targyak.contains("bögre")) {
+                if (parancs.contains(HASZNAL)) {
+                    if (parancs.contains(BOGRE)) {
+                        if (DesertWind.targyak.contains(BOGRE)) {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
-                            DesertWind.targyak.remove("bögre");
-                            DesertWind.targyak.add("törött bögre");
+                            DesertWind.targyak.remove(BOGRE);
+                            DesertWind.targyak.add(TOROTT_BOGRE);
                         } else {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }
