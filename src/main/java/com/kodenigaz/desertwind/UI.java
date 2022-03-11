@@ -2,6 +2,8 @@ package com.kodenigaz.desertwind;
 
 import java.util.Scanner;
 
+import static com.kodenigaz.desertwind.TortenetSzoveg.HALAL;
+
 class UI {
     static String parancs;
     Masodik masodik = new Masodik();// AZ com.kodenigaz.desertwind.UI létrehozza a objecteket az összes helyszíni classból a nevezéktan Nagy kezdő betü a Class, belőle az Object kis kezdőbetü
@@ -13,7 +15,7 @@ class UI {
     void megjelenito(int jelenetszam) {
         switch (jelenetszam) {
             case 1:
-                System.out.println("Sajnos meghaltál. Játékod itt véget ér.");
+                System.out.println(HALAL);
                 break;
             case 2:
                 this.masodik.szoveg();
@@ -36,7 +38,7 @@ class UI {
     void parancsertelmezo(int jelenetszam, String parancs) {
         switch (jelenetszam) {
             case 1:
-                System.out.println("Sajnos meghaltál. Játékod itt véget ér.");
+                System.out.println(HALAL);
                 break;
             case 2:
                 this.masodik.parancs_Ertelmezo(parancs);

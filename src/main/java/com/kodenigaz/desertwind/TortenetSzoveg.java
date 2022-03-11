@@ -1,6 +1,6 @@
 package com.kodenigaz.desertwind;
 
-public final class StringValues {
+public final class TortenetSzoveg {
     public static final String KEZDODIK = "Elkezdődik a kaland, ez az első helyszín...";
     public static final String MASODIK_SZOVEG_0 = "Álmosan kelsz fel. A Nap még fel se jőtt az égre, de neked/n"+
             "már dolgoznod kell. Zörgetnek az ajtódon. Sietned kell, vagy újra/n"+
@@ -72,4 +72,6 @@ public final class StringValues {
     public static final String OTODIK_BOGRE_1 = "Nincs nálad ép bögre!";
 
     public static final String HATODIK_K_NY = "Utadat  állják a házak";
+    public static final String HALAL = "Sajnos meghaltál. Játékod itt véget ér.";
+
 }
