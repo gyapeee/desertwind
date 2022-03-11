@@ -2,6 +2,7 @@ package com.kodenigaz.desertwind;
 
 import java.util.Scanner;
 
+import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
 import static com.kodenigaz.desertwind.TortenetSzoveg.HALAL;
 
 class UI {
@@ -12,47 +13,47 @@ class UI {
     Otodik otodik = new Otodik();
     Hatodik hatodik = new Hatodik();
 
-    void megjelenito(int jelenetszam) {
+    void megjelenito(Jelenet.JelenetSzam jelenetszam) {
         switch (jelenetszam) {
-            case 1:
+            case JELENET_1:
                 System.out.println(HALAL);
                 break;
-            case 2:
+            case JELENET_2:
                 this.masodik.szoveg();
                 break;
-            case 3:
+            case JELENET_3:
                 this.harmadik.szoveg();
                 break;
-            case 4:
+            case JELENET_4:
                 this.negyedik.szoveg();
                 break;
-            case 5:
+            case JELENET_5:
                 this.otodik.szoveg();
                 break;
-            case 6:
+            case JELENET_6:
                 this.hatodik.szoveg();
                 break;
         }
     }
 
-    void parancsertelmezo(int jelenetszam, String parancs) {
+    void parancsertelmezo(Jelenet.JelenetSzam jelenetszam, String parancs) {
         switch (jelenetszam) {
-            case 1:
+            case JELENET_1:
                 System.out.println(HALAL);
                 break;
-            case 2:
+            case JELENET_2:
                 this.masodik.parancs_Ertelmezo(parancs);
                 break;
-            case 3:
+            case JELENET_3:
                 this.harmadik.parancs_Ertelmezo(parancs);
                 break;
-            case 4:
+            case JELENET_4:
                 this.negyedik.parancs_Ertelmezo(parancs);
                 break;
-            case 5:
+            case JELENET_5:
                 this.otodik.parancs_Ertelmezo(parancs);
                 break;
-            case 6:
+            case JELENET_6:
                 this.hatodik.parancs_Ertelmezo(parancs);
                 break;
         }
@@ -67,7 +68,7 @@ class UI {
         }
         if (parancs.contains("öngyilkos")) {
             System.out.println("Ahogy kéred");
-            DesertWind.jelenetszam = 1;
+            DesertWind.jelenetszam = JELENET_1;
         }
         if (parancs.contains("tárgyak")) {
             System.out.print("Nálad lévő tárgyak: ");

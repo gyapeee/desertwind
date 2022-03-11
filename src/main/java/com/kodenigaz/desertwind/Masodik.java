@@ -1,11 +1,14 @@
 package com.kodenigaz.desertwind;
 
-import static com.kodenigaz.desertwind.Irany.DEL;
+import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
+import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_3;
+import static com.kodenigaz.desertwind.Parancs.*;
 
 // 2
 class Masodik extends Jelenet {
     int verzio = 0; // Minden helyszíni classnak több verzioja lehet, ezt a verziot az adott parancs értelmező modosíthatja!
 
+    @Override
     void szoveg() {
         switch (verzio) {
             case (0):
@@ -17,32 +20,33 @@ class Masodik extends Jelenet {
         }
     }
 
+    @Override
     void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
-            case Irany.ESZAK: {
+            case ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.jelenetszam = 3;
+                DesertWind.jelenetszam = JELENET_3;
                 verzio = 1;
                 break;
             }
-            case Irany.KELET: {
+            case KELETRE_MEGY: {
                 System.out.println(TortenetSzoveg.MASODIK_K);
                 break;
             }
-            case DEL: {
+            case DELRE_MEGY: {
                 System.out.println(TortenetSzoveg.MASODIK_D);
                 break;
             }
-            case Irany.NYUGAT: {
+            case NYUGATRA_MEGY: {
                 System.out.println(TortenetSzoveg.MASODIK_N);
                 break;
             }
-            case "vár": {
+            case VARAKOZIK: {
                 System.out.println(TortenetSzoveg.MASODIK_VAR);
-                DesertWind.jelenetszam = 1;
+                DesertWind.jelenetszam = JELENET_1;
                 break;
             }
-            case "ker": {
+            case KERES: {
                 if (DesertWind.targyak.contains("bögre")) {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_0);
                     break;

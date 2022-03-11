@@ -1,8 +1,13 @@
 package com.kodenigaz.desertwind;
 
+import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.*;
+import static com.kodenigaz.desertwind.Parancs.KERES;
+import static com.kodenigaz.desertwind.Parancs.VARAKOZIK;
+
 class Otodik extends Jelenet {
     int verzio = 0;
 
+    @Override
     void szoveg() {
         switch (verzio) {
             case (0):
@@ -17,33 +22,34 @@ class Otodik extends Jelenet {
         }
     }
 
+    @Override
     void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
-            case Irany.ESZAK: {
+            case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.jelenetszam = 4;
+                DesertWind.jelenetszam = JELENET_4;
                 break;
             }
-            case Irany.KELET: {
+            case Parancs.KELETRE_MEGY: {
                 System.out.println(TortenetSzoveg.KELET);
                 //com.kodenigaz.desertwind.DesertWind.jelenetszam = 8;
                 break;
             }
-            case Irany.DEL: {
+            case Parancs.DELRE_MEGY: {
                 System.out.println(TortenetSzoveg.DEL);
-                DesertWind.jelenetszam = 6;
+                DesertWind.jelenetszam = JELENET_6;
                 break;
             }
-            case Irany.NYUGAT: {
+            case Parancs.NYUGATRA_MEGY: {
                 System.out.println(TortenetSzoveg.OTODIK_N);
                 break;
             }
-            case "vár": {
+            case VARAKOZIK: {
                 System.out.println(TortenetSzoveg.OTODIK_VAR);
-                DesertWind.jelenetszam = 1;
+                DesertWind.jelenetszam = JELENET_5;
                 break;
             }
-            case "ker": {
+            case KERES: {
                 if (DesertWind.targyak.contains("gyűrű")) {
                     System.out.println(TortenetSzoveg.OTODIK_KER_GYURU);
                     break;
