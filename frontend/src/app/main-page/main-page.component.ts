@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent implements OnInit {
-  title: string = 'Itt kezdődik a desertwind story';
+  title: string = 'DesertWind';
   constructor() {}
 
   ngOnInit(): void {}

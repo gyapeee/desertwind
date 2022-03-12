@@ -9,6 +9,7 @@ import { ActionComponent } from './action/action.component';
 import { CompassRoseComponent } from './compass-rose/compass-rose.component';
 import { StoryBoxComponent } from './story-box/story-box.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { LocationBoxComponent } from './location-box/location-box.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     ActionComponent,
     CompassRoseComponent,
     StoryBoxComponent,
-    InventoryComponent
+    InventoryComponent,
+    LocationBoxComponent
   ],
   imports: [
     BrowserModule,
