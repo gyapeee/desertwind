@@ -1,27 +1,31 @@
 package com.kodenigaz.desertwind;
 
+import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_5;
+
 class Hatodik extends Jelenet {
+    @Override
     void szoveg() {
-        System.out.println(StringValues.HATODIK_SZOVEG);
+        System.out.println(TortenetSzoveg.HATODIK_SZOVEG);
     }
 
+    @Override
     void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
-            case "é": {
-                System.out.println(StringValues.ESZAK);
-                DesertWind.jelenetszam = 5;
+            case Parancs.ESZAKRA_MEGY: {
+                System.out.println(TortenetSzoveg.ESZAK);
+                DesertWind.jelenetszam = JELENET_5;
                 verzio = 0;
                 break;
             }
-            case "d": {
-                System.out.println(StringValues.DEL);
+            case Parancs.DELRE_MEGY: {
+                System.out.println(TortenetSzoveg.DEL);
                 //com.kodenigaz.desertwind.DesertWind.jelenetszam = 7;
                 verzio = 0;
                 break;
             }
         }
-        if (parancs.equals("ny") || parancs.equals("k")) {
-            System.out.println(StringValues.HATODIK_K_NY);
+        if (parancs.equals(Parancs.NYUGATRA_MEGY) || parancs.equals(Parancs.KELETRE_MEGY)) {
+            System.out.println(TortenetSzoveg.HATODIK_K_NY);
         }
     }
 }

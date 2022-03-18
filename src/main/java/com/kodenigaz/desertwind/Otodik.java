@@ -1,67 +1,73 @@
 package com.kodenigaz.desertwind;
 
+import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.*;
+import static com.kodenigaz.desertwind.Parancs.*;
+import static com.kodenigaz.desertwind.Targyak.*;
+
 class Otodik extends Jelenet {
     int verzio = 0;
 
+    @Override
     void szoveg() {
         switch (verzio) {
             case (0):
-                System.out.println(StringValues.OTODIK_SZOVEG_0);
-                if (!(DesertWind.targyak.contains("gyűrű"))) {
-                    System.out.println(StringValues.OTODIK_GYURU);
+                System.out.println(TortenetSzoveg.OTODIK_SZOVEG_0);
+                if (!(DesertWind.targyak.contains(GYURU))) {
+                    System.out.println(TortenetSzoveg.OTODIK_GYURU);
                 }
                 break;
             case (1):
-                System.out.println(StringValues.OTODIK_SZOVEG_1);
+                System.out.println(TortenetSzoveg.OTODIK_SZOVEG_1);
                 break;
         }
     }
 
+    @Override
     void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
-            case "é": {
-                System.out.println(StringValues.ESZAK);
-                DesertWind.jelenetszam = 4;
+            case Parancs.ESZAKRA_MEGY: {
+                System.out.println(TortenetSzoveg.ESZAK);
+                DesertWind.jelenetszam = JELENET_4;
                 break;
             }
-            case "k": {
-                System.out.println(StringValues.KELET);
+            case Parancs.KELETRE_MEGY: {
+                System.out.println(TortenetSzoveg.KELET);
                 //com.kodenigaz.desertwind.DesertWind.jelenetszam = 8;
                 break;
             }
-            case "d": {
-                System.out.println(StringValues.DEL);
-                DesertWind.jelenetszam = 6;
+            case Parancs.DELRE_MEGY: {
+                System.out.println(TortenetSzoveg.DEL);
+                DesertWind.jelenetszam = JELENET_6;
                 break;
             }
-            case "n": {
-                System.out.println(StringValues.OTODIK_N);
+            case Parancs.NYUGATRA_MEGY: {
+                System.out.println(TortenetSzoveg.OTODIK_N);
                 break;
             }
-            case "vár": {
-                System.out.println(StringValues.OTODIK_VAR);
-                DesertWind.jelenetszam = 1;
+            case VARAKOZIK: {
+                System.out.println(TortenetSzoveg.OTODIK_VAR);
+                DesertWind.jelenetszam = JELENET_5;
                 break;
             }
-            case "ker": {
-                if (DesertWind.targyak.contains("gyűrű")) {
-                    System.out.println(StringValues.OTODIK_KER_GYURU);
+            case KERES: {
+                if (DesertWind.targyak.contains(GYURU)) {
+                    System.out.println(TortenetSzoveg.OTODIK_KER_GYURU);
                     break;
                 } else {
-                    System.out.println(StringValues.OTODIK_KER);
-                    DesertWind.targyak.add("gyűrű");
+                    System.out.println(TortenetSzoveg.OTODIK_KER);
+                    DesertWind.targyak.add(GYURU);
                     break;
                 }
             }
             default: {
-                if (parancs.contains("használ")) {
-                    if (parancs.contains("bögre")) {
-                        if (DesertWind.targyak.contains("bögre")) {
-                            System.out.println(StringValues.OTODIK_BOGRE_0);
-                            DesertWind.targyak.remove("bögre");
-                            DesertWind.targyak.add("törött bögre");
+                if (parancs.contains(HASZNAL)) {
+                    if (parancs.contains(BOGRE)) {
+                        if (DesertWind.targyak.contains(BOGRE)) {
+                            System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
+                            DesertWind.targyak.remove(BOGRE);
+                            DesertWind.targyak.add(TOROTT_BOGRE);
                         } else {
-                            System.out.println(StringValues.OTODIK_BOGRE_1);
+                            System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }
                     }
                 }

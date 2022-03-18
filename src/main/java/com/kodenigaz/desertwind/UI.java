@@ -2,6 +2,10 @@ package com.kodenigaz.desertwind;
 
 import java.util.Scanner;
 
+import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
+import static com.kodenigaz.desertwind.Parancs.*;
+import static com.kodenigaz.desertwind.TortenetSzoveg.*;
+
 class UI {
     static String parancs;
     Masodik masodik = new Masodik();// AZ com.kodenigaz.desertwind.UI létrehozza a objecteket az összes helyszíni classból a nevezéktan Nagy kezdő betü a Class, belőle az Object kis kezdőbetü
@@ -10,47 +14,47 @@ class UI {
     Otodik otodik = new Otodik();
     Hatodik hatodik = new Hatodik();
 
-    void megjelenito(int jelenetszam) {
+    void megjelenito(Jelenet.JelenetSzam jelenetszam) {
         switch (jelenetszam) {
-            case 1:
-                System.out.println("Sajnos meghaltál. Játékod itt véget ér.");
+            case JELENET_1:
+                System.out.println(HALAL);
                 break;
-            case 2:
+            case JELENET_2:
                 this.masodik.szoveg();
                 break;
-            case 3:
+            case JELENET_3:
                 this.harmadik.szoveg();
                 break;
-            case 4:
+            case JELENET_4:
                 this.negyedik.szoveg();
                 break;
-            case 5:
+            case JELENET_5:
                 this.otodik.szoveg();
                 break;
-            case 6:
+            case JELENET_6:
                 this.hatodik.szoveg();
                 break;
         }
     }
 
-    void parancsertelmezo(int jelenetszam, String parancs) {
+    void parancsertelmezo(Jelenet.JelenetSzam jelenetszam, String parancs) {
         switch (jelenetszam) {
-            case 1:
-                System.out.println("Sajnos meghaltál. Játékod itt véget ér.");
+            case JELENET_1:
+                System.out.println(HALAL);
                 break;
-            case 2:
+            case JELENET_2:
                 this.masodik.parancs_Ertelmezo(parancs);
                 break;
-            case 3:
+            case JELENET_3:
                 this.harmadik.parancs_Ertelmezo(parancs);
                 break;
-            case 4:
+            case JELENET_4:
                 this.negyedik.parancs_Ertelmezo(parancs);
                 break;
-            case 5:
+            case JELENET_5:
                 this.otodik.parancs_Ertelmezo(parancs);
                 break;
-            case 6:
+            case JELENET_6:
                 this.hatodik.parancs_Ertelmezo(parancs);
                 break;
         }
@@ -58,17 +62,16 @@ class UI {
 
     String bekero() {
         Scanner bekero = new Scanner(System.in);
-        System.out.println("Mit teszel? \n");
+        System.out.println(MIT_TESZEL + System.lineSeparator());
         parancs = bekero.nextLine();
-        if (parancs.contains("help")) {
-            System.out.println("Te most segítséget kértél a játék irányításában. Egyelőre sajnos nem lehet irányitani....");
+        if (parancs.contains(HELP)) {
+            System.out.println(HELP_NINCS_IRANYITAS);
         }
-        if (parancs.contains("öngyilkos")) {
-            System.out.println("Ahogy kéred");
-            DesertWind.jelenetszam = 1;
+        if (parancs.contains(ONGYILKOS)) {
+            DesertWind.jelenetszam = JELENET_1;
         }
-        if (parancs.contains("tárgyak")) {
-            System.out.print("Nálad lévő tárgyak: ");
+        if (parancs.contains(TARGYAK)) {
+            System.out.print(NALAD_LEVO_TARGYAK);
             for (String targy : DesertWind.targyak) {
                 System.out.print(targy + ", ");
             }
