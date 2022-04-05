@@ -17,10 +17,11 @@ public class DesertWind {
     static String parancs = "";
     //Parancs egy globális STRING változo, adni kell neki valami alap értéket különben NullPoint hibát tudunk generálni
     static ArrayList<String> targyak = new ArrayList<>();
+    static UI Felulet = new UI(); //Felulet object fogja megjeleniteni a megfelelő függvényeivel a helyszínt, bekérni a parancsot és értelmezni a parancsot
+
 
     public static void main(String[] args) {
         SpringApplication.run(DesertWind.class, args);
-        UI Felulet = new UI(); //Felulet object fogja megjeleniteni a megfelelő függvényeivel a helyszínt, bekérni a parancsot és értelmezni a parancsot
         System.out.println(TortenetSzoveg.KEZDODIK); //Egyszer majd lesz rendes intro ... :)
         do {
             Felulet.megjelenito(jelenetszam);  // Megjeleníti az adott helyszín alap szövegét, itt bele kell még kódolni, hogy létezhet olyan hogy változik a helyszín leírása amikor visszamegyünk

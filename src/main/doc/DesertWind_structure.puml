@@ -1,0 +1,234 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.kodenigaz.desertwind.DesertWind",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1606736256 { 
+   	label=kodenigaz
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1252239051 { 
+   	label=desertwind
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   DesertWind1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DesertWind</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Harmadik1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Harmadik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Hatodik1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Hatodik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Jelenet1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Jelenet</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   verzio: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Masodik1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Masodik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   verzio: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Negyedik1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Negyedik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Otodik1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Otodik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   verzio: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+UI1965813016[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)UI</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   harmadik: Harmadik [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   hatodik: Hatodik [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   masodik: Masodik [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   negyedik: Negyedik [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   otodik: Otodik [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># bekero(): String</TD></TR>
+<TR><TD ALIGN="LEFT" ># megjelenito(jelenetszam: JelenetSzam)</TD></TR>
+<TR><TD ALIGN="LEFT" ># parancsertelmezo(jelenetszam: JelenetSzam, parancs: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Jelenet1965813016 -> Harmadik1965813016[arrowhead=none, arrowtail=empty, dir=both];
+Jelenet1965813016 -> Hatodik1965813016[arrowhead=none, arrowtail=empty, dir=both];
+Jelenet1965813016 -> Masodik1965813016[arrowhead=none, arrowtail=empty, dir=both];
+Jelenet1965813016 -> Negyedik1965813016[arrowhead=none, arrowtail=empty, dir=both];
+Jelenet1965813016 -> Otodik1965813016[arrowhead=none, arrowtail=empty, dir=both];
+UI1965813016 -> Harmadik1965813016[label="harmadik
+[0..1]"];
+UI1965813016 -> Hatodik1965813016[label="hatodik
+[0..1]"];
+UI1965813016 -> Masodik1965813016[label="masodik
+[0..1]"];
+UI1965813016 -> Negyedik1965813016[label="negyedik
+[0..1]"];
+UI1965813016 -> Otodik1965813016[label="otodik
+[0..1]"];
+    
+}
+@enduml
