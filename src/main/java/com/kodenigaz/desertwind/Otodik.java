@@ -1,14 +1,13 @@
 package com.kodenigaz.desertwind;
 
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.*;
 import static com.kodenigaz.desertwind.Parancs.*;
 import static com.kodenigaz.desertwind.Targyak.*;
 
-class Otodik extends Jelenet {
+class Otodik extends Verzio implements Jelenet {
     int verzio = 0;
 
     @Override
-    void szoveg() {
+    public void szoveg() {
         switch (verzio) {
             case (0):
                 System.out.println(TortenetSzoveg.OTODIK_SZOVEG_0);
@@ -23,11 +22,11 @@ class Otodik extends Jelenet {
     }
 
     @Override
-    void parancs_Ertelmezo(String parancs) {
+    public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.jelenetszam = JELENET_4;
+                DesertWind.jelenetszam = com.kodenigaz.desertwind.JelenetSzam.JELENET_4;
                 break;
             }
             case Parancs.KELETRE_MEGY: {
@@ -37,7 +36,7 @@ class Otodik extends Jelenet {
             }
             case Parancs.DELRE_MEGY: {
                 System.out.println(TortenetSzoveg.DEL);
-                DesertWind.jelenetszam = JELENET_6;
+                DesertWind.jelenetszam = com.kodenigaz.desertwind.JelenetSzam.JELENET_6;
                 break;
             }
             case Parancs.NYUGATRA_MEGY: {
@@ -46,7 +45,7 @@ class Otodik extends Jelenet {
             }
             case VARAKOZIK: {
                 System.out.println(TortenetSzoveg.OTODIK_VAR);
-                DesertWind.jelenetszam = JELENET_5;
+                DesertWind.jelenetszam = com.kodenigaz.desertwind.JelenetSzam.JELENET_5;
                 break;
             }
             case KERES: {

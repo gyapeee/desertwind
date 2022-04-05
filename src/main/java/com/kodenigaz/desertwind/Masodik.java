@@ -1,17 +1,17 @@
 package com.kodenigaz.desertwind;
 
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_3;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_1;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_3;
 import static com.kodenigaz.desertwind.Parancs.*;
 import static com.kodenigaz.desertwind.Targyak.BOGRE;
 import static com.kodenigaz.desertwind.Targyak.TOROTT_BOGRE;
 
 // 2
-class Masodik extends Jelenet {
+class Masodik extends Verzio implements Jelenet {
     int verzio = 0; // Minden helyszíni classnak több verzioja lehet, ezt a verziot az adott parancs értelmező modosíthatja!
 
     @Override
-    void szoveg() {
+    public void szoveg() {
         switch (verzio) {
             case (0):
                 System.out.println(TortenetSzoveg.MASODIK_SZOVEG_0);
@@ -23,7 +23,7 @@ class Masodik extends Jelenet {
     }
 
     @Override
-    void parancs_Ertelmezo(String parancs) {
+    public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);

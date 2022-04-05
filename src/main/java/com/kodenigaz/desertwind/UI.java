@@ -2,7 +2,7 @@ package com.kodenigaz.desertwind;
 
 import java.util.Scanner;
 
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_1;
 import static com.kodenigaz.desertwind.Parancs.*;
 import static com.kodenigaz.desertwind.TortenetSzoveg.*;
 
@@ -14,7 +14,7 @@ class UI {
     Otodik otodik = new Otodik();
     Hatodik hatodik = new Hatodik();
 
-    void megjelenito(Jelenet.JelenetSzam jelenetszam) {
+    void megjelenito(JelenetSzam jelenetszam) {
         switch (jelenetszam) {
             case JELENET_1:
                 System.out.println(HALAL);
@@ -37,7 +37,7 @@ class UI {
         }
     }
 
-    void parancsertelmezo(Jelenet.JelenetSzam jelenetszam, String parancs) {
+    void parancsertelmezo(JelenetSzam jelenetszam, String parancs) {
         switch (jelenetszam) {
             case JELENET_1:
                 System.out.println(HALAL);

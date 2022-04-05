@@ -1,13 +1,12 @@
 package com.kodenigaz.desertwind;
 
-import com.kodenigaz.desertwind.Jelenet.JelenetSzam;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_2;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_1;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_2;
 
 
 @SpringBootApplication

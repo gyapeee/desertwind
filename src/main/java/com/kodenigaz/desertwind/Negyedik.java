@@ -1,32 +1,34 @@
 package com.kodenigaz.desertwind;
 
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_5;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_1;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_5;
 import static com.kodenigaz.desertwind.Parancs.KERES;
 import static com.kodenigaz.desertwind.Parancs.VARAKOZIK;
+import static com.kodenigaz.desertwind.Verzio.VerzioErtek.VERZIO_0;
+import static com.kodenigaz.desertwind.Verzio.VerzioErtek.VERZIO_1;
 
-class Negyedik extends Jelenet {
+class Negyedik extends Verzio implements Jelenet {
     Negyedik() {
-        verzio = 0;
+        verzio = VERZIO_0;
     }
 
     @Override
-    void szoveg() {
+    public void szoveg() {
         switch (verzio) {
-            case (0):
+            case VERZIO_0:
                 System.out.println(TortenetSzoveg.NEGYEDIK_SZOVEG_0);
                 break;
-            case (1):
+            case VERZIO_1:
                 System.out.println(TortenetSzoveg.NEGYEDIK_SZOVEG_1);
                 break;
         }
     }
 
     @Override
-    void parancs_Ertelmezo(String parancs) {
+    public void parancs_Ertelmezo(String parancs) {
         if (parancs.equals(Parancs.DELRE_MEGY)) {
             DesertWind.jelenetszam = JELENET_5;
-            verzio = 1;
+            verzio = VERZIO_1;
         }
         if (parancs.equals(Parancs.ESZAKRA_MEGY) || parancs.equals(Parancs.NYUGATRA_MEGY) || parancs.equals(Parancs.KELETRE_MEGY)) {
             System.out.println(TortenetSzoveg.NEGYEDIK_E_NY_K);

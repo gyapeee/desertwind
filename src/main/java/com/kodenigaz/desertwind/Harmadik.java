@@ -1,18 +1,18 @@
 package com.kodenigaz.desertwind;
 
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_4;
+import static com.kodenigaz.desertwind.JelenetSzam.JELENET_4;
 import static com.kodenigaz.desertwind.Parancs.KERES;
 import static com.kodenigaz.desertwind.Parancs.VARAKOZIK;
 
 // 3
-class Harmadik extends Jelenet {
+class Harmadik extends Verzio implements Jelenet {
     @Override
-    void szoveg() {
+    public void szoveg() {
         System.out.println(TortenetSzoveg.HARMADIK_SZOVEG);
     }
 
     @Override
-    void parancs_Ertelmezo(String parancs) {
+    public void parancs_Ertelmezo(String parancs) {
         // az or parancs || jelnek felel meg javaban
         if (parancs.equals(Parancs.ESZAKRA_MEGY)) {
             DesertWind.jelenetszam = JELENET_4;
