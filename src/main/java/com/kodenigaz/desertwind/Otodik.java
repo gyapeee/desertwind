@@ -4,18 +4,25 @@ import static com.kodenigaz.desertwind.Parancs.*;
 import static com.kodenigaz.desertwind.Targyak.*;
 
 class Otodik extends Verzio implements Jelenet {
-    int verzio = 0;
+
+    public Otodik() {
+        super();
+    }
+
+    public Otodik(VerzioErtek verzio) {
+        super(verzio);
+    }
 
     @Override
     public void szoveg() {
         switch (verzio) {
-            case (0):
+            case VERZIO_0:
                 System.out.println(TortenetSzoveg.OTODIK_SZOVEG_0);
                 if (!(DesertWind.targyak.contains(GYURU))) {
                     System.out.println(TortenetSzoveg.OTODIK_GYURU);
                 }
                 break;
-            case (1):
+            case VERZIO_1:
                 System.out.println(TortenetSzoveg.OTODIK_SZOVEG_1);
                 break;
         }
@@ -26,17 +33,17 @@ class Otodik extends Verzio implements Jelenet {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.jelenetszam = com.kodenigaz.desertwind.JelenetSzam.JELENET_4;
+                DesertWind.setJelenet(new Negyedik());
                 break;
             }
             case Parancs.KELETRE_MEGY: {
                 System.out.println(TortenetSzoveg.KELET);
-                //com.kodenigaz.desertwind.DesertWind.jelenetszam = 8;
+                //DesertWind.setJelenet(new Nyolcadik());
                 break;
             }
             case Parancs.DELRE_MEGY: {
                 System.out.println(TortenetSzoveg.DEL);
-                DesertWind.jelenetszam = com.kodenigaz.desertwind.JelenetSzam.JELENET_6;
+                DesertWind.setJelenet(new Hatodik());
                 break;
             }
             case Parancs.NYUGATRA_MEGY: {
@@ -45,7 +52,7 @@ class Otodik extends Verzio implements Jelenet {
             }
             case VARAKOZIK: {
                 System.out.println(TortenetSzoveg.OTODIK_VAR);
-                DesertWind.jelenetszam = com.kodenigaz.desertwind.JelenetSzam.JELENET_5;
+                DesertWind.setJelenet(new Otodik());
                 break;
             }
             case KERES: {

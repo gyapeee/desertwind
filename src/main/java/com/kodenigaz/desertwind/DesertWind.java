@@ -5,13 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 
-import static com.kodenigaz.desertwind.JelenetSzam.JELENET_1;
-import static com.kodenigaz.desertwind.JelenetSzam.JELENET_2;
-
 
 @SpringBootApplication
 public class DesertWind {
-    static JelenetSzam jelenetszam = JELENET_2;
+    private static Jelenet aktualisJelenet = new Masodik();
     //Az eredeti programban is volt egy globális változó, Az első helyszín megegyezés szerint a 2-es. az 1-es hely a halál és a játék vége
     static String parancs = "";
     //Parancs egy globális STRING változo, adni kell neki valami alap értéket különben NullPoint hibát tudunk generálni
@@ -23,11 +20,19 @@ public class DesertWind {
         SpringApplication.run(DesertWind.class, args);
         System.out.println(TortenetSzoveg.KEZDODIK); //Egyszer majd lesz rendes intro ... :)
         do {
-            Felulet.megjelenito(jelenetszam);  // Megjeleníti az adott helyszín alap szövegét, itt bele kell még kódolni, hogy létezhet olyan hogy változik a helyszín leírása amikor visszamegyünk
-            if (jelenetszam != JELENET_1) {
+            Felulet.megjelenito(aktualisJelenet);  // Megjeleníti az adott helyszín alap szövegét, itt bele kell még kódolni, hogy létezhet olyan hogy változik a helyszín leírása amikor visszamegyünk
+            if (!isAktualisJelenetHalal(aktualisJelenet)) {
                 parancs = Felulet.bekero();
             } // Ha nem haltunk meg, kér új parancsot
-            Felulet.parancsertelmezo(jelenetszam, parancs); // A kapott parancsot értelmezi az adott helyszínen és változatja, jelen esetben csak a jelenetszamot mint globalis változót, egy nap lesz set get, de most egyelőre jo igy is
-        } while (jelenetszam != JELENET_1);
+            Felulet.parancsertelmezo(aktualisJelenet, parancs); // A kapott parancsot értelmezi az adott helyszínen és változatja, jelen esetben csak a jelenetszamot mint globalis változót, egy nap lesz set get, de most egyelőre jo igy is
+        } while (!isAktualisJelenetHalal(aktualisJelenet));
+    }
+
+    public static void setJelenet(Jelenet aktualisJelenet) {
+        DesertWind.aktualisJelenet = aktualisJelenet;
+    }
+
+    private static boolean isAktualisJelenetHalal(Jelenet aktualisJelenet) {
+        return aktualisJelenet.getClass().equals(new Elso().getClass());
     }
 }

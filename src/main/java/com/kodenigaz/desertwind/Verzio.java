@@ -6,5 +6,21 @@ abstract public class Verzio {
         VERZIO_1
     }
 
-    public VerzioErtek verzio;
+    protected VerzioErtek verzio;
+
+    protected Verzio() {
+        this.verzio = VerzioErtek.VERZIO_0;
+    }
+
+    public Verzio(VerzioErtek verzio) {
+        this.verzio = verzio;
+    }
+
+    public VerzioErtek getVerzio() {
+        return verzio;
+    }
+
+    public void setVerzio(VerzioErtek verzio) {
+        this.verzio = verzio;
+    }
 }

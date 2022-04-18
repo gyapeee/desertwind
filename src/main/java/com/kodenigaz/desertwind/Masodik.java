@@ -1,22 +1,27 @@
 package com.kodenigaz.desertwind;
 
-import static com.kodenigaz.desertwind.JelenetSzam.JELENET_1;
-import static com.kodenigaz.desertwind.JelenetSzam.JELENET_3;
 import static com.kodenigaz.desertwind.Parancs.*;
 import static com.kodenigaz.desertwind.Targyak.BOGRE;
 import static com.kodenigaz.desertwind.Targyak.TOROTT_BOGRE;
+import static com.kodenigaz.desertwind.Verzio.VerzioErtek.VERZIO_1;
 
 // 2
 class Masodik extends Verzio implements Jelenet {
-    int verzio = 0; // Minden helyszíni classnak több verzioja lehet, ezt a verziot az adott parancs értelmező modosíthatja!
+    public Masodik() {
+        super();
+    }
+
+    public Masodik(VerzioErtek verzio) {
+        super(verzio);
+    }
 
     @Override
     public void szoveg() {
         switch (verzio) {
-            case (0):
+            case VERZIO_0:
                 System.out.println(TortenetSzoveg.MASODIK_SZOVEG_0);
                 break;
-            case (1):
+            case VERZIO_1:
                 System.out.println(TortenetSzoveg.MASODIK_SZOVEG_1);
                 break;
         }
@@ -27,8 +32,7 @@ class Masodik extends Verzio implements Jelenet {
         switch (parancs) {
             case ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.jelenetszam = JELENET_3;
-                verzio = 1;
+                DesertWind.setJelenet(new Harmadik(VERZIO_1));
                 break;
             }
             case KELETRE_MEGY: {
@@ -45,7 +49,7 @@ class Masodik extends Verzio implements Jelenet {
             }
             case VARAKOZIK: {
                 System.out.println(TortenetSzoveg.MASODIK_VAR);
-                DesertWind.jelenetszam = JELENET_1;
+                DesertWind.setJelenet(new Elso());
                 break;
             }
             case KERES: {
