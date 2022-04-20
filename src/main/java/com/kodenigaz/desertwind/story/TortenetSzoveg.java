@@ -1,4 +1,4 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.story;
 
 public final class TortenetSzoveg {
     // TODO text would be come from resource file

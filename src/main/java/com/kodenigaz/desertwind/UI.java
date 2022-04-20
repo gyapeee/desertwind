@@ -1,9 +1,12 @@
 package com.kodenigaz.desertwind;
 
+import com.kodenigaz.desertwind.scene.Elso;
+import com.kodenigaz.desertwind.scene.Jelenet;
+
 import java.util.Scanner;
 
-import static com.kodenigaz.desertwind.Parancs.*;
-import static com.kodenigaz.desertwind.TortenetSzoveg.*;
+import static com.kodenigaz.desertwind.story.Parancs.*;
+import static com.kodenigaz.desertwind.story.TortenetSzoveg.*;
 
 class UI {
     static String beolvasottParancs;
@@ -28,7 +31,7 @@ class UI {
         }
         if (beolvasottParancs.contains(TARGYAK)) {
             System.out.print(NALAD_LEVO_TARGYAK);
-            for (String targy : DesertWind.targyak) {
+            for (String targy : DesertWind.getTargyak()) {
                 System.out.print(targy + ", ");
             }
             System.out.println();

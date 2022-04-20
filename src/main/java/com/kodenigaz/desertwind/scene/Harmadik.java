@@ -1,7 +1,11 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.scene;
+
+import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.story.Parancs;
+import com.kodenigaz.desertwind.story.TortenetSzoveg;
 
 // 3
-class Harmadik extends Verzio implements Jelenet {
+public class Harmadik extends Verzio implements Jelenet {
 
     public Harmadik() {
         super();

@@ -1,9 +1,13 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.scene;
 
-import static com.kodenigaz.desertwind.Parancs.*;
-import static com.kodenigaz.desertwind.Targyak.*;
+import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.story.Parancs;
+import com.kodenigaz.desertwind.story.TortenetSzoveg;
 
-class Otodik extends Verzio implements Jelenet {
+import static com.kodenigaz.desertwind.story.Parancs.*;
+import static com.kodenigaz.desertwind.story.Targyak.*;
+
+public class Otodik extends Verzio implements Jelenet {
 
     public Otodik() {
         super();
@@ -18,7 +22,7 @@ class Otodik extends Verzio implements Jelenet {
         switch (verzio) {
             case VERZIO_0:
                 System.out.println(TortenetSzoveg.OTODIK_SZOVEG_0);
-                if (!(DesertWind.targyak.contains(GYURU))) {
+                if (!(DesertWind.getTargyak().contains(GYURU))) {
                     System.out.println(TortenetSzoveg.OTODIK_GYURU);
                 }
                 break;
@@ -56,22 +60,22 @@ class Otodik extends Verzio implements Jelenet {
                 break;
             }
             case KERES: {
-                if (DesertWind.targyak.contains(GYURU)) {
+                if (DesertWind.getTargyak().contains(GYURU)) {
                     System.out.println(TortenetSzoveg.OTODIK_KER_GYURU);
                     break;
                 } else {
                     System.out.println(TortenetSzoveg.OTODIK_KER);
-                    DesertWind.targyak.add(GYURU);
+                    DesertWind.getTargyak().add(GYURU);
                     break;
                 }
             }
             default: {
                 if (parancs.contains(HASZNAL)) {
                     if (parancs.contains(BOGRE)) {
-                        if (DesertWind.targyak.contains(BOGRE)) {
+                        if (DesertWind.getTargyak().contains(BOGRE)) {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
-                            DesertWind.targyak.remove(BOGRE);
-                            DesertWind.targyak.add(TOROTT_BOGRE);
+                            DesertWind.getTargyak().remove(BOGRE);
+                            DesertWind.getTargyak().add(TOROTT_BOGRE);
                         } else {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }

@@ -1,8 +1,12 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.scene;
 
-import static com.kodenigaz.desertwind.Verzio.VerzioErtek.VERZIO_1;
+import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.story.Parancs;
+import com.kodenigaz.desertwind.story.TortenetSzoveg;
 
-class Negyedik extends Verzio implements Jelenet {
+import static com.kodenigaz.desertwind.scene.Verzio.VerzioErtek.VERZIO_1;
+
+public class Negyedik extends Verzio implements Jelenet {
 
     public Negyedik() {
         super();

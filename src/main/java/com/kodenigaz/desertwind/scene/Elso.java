@@ -1,9 +1,9 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.scene;
 
-import static com.kodenigaz.desertwind.TortenetSzoveg.HALAL;
+import static com.kodenigaz.desertwind.story.TortenetSzoveg.HALAL;
 
 // 1
-class Elso extends Verzio implements Jelenet {
+public class Elso extends Verzio implements Jelenet {
     public Elso() {
         super();
     }

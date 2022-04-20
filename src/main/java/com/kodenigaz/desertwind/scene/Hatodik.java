@@ -1,6 +1,10 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.scene;
 
-class Hatodik extends Verzio implements Jelenet {
+import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.story.Parancs;
+import com.kodenigaz.desertwind.story.TortenetSzoveg;
+
+public class Hatodik extends Verzio implements Jelenet {
     public Hatodik() {
         super();
     }
