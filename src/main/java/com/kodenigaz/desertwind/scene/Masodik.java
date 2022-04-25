@@ -1,34 +1,41 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.scene;
 
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_1;
-import static com.kodenigaz.desertwind.Jelenet.JelenetSzam.JELENET_3;
-import static com.kodenigaz.desertwind.Parancs.*;
-import static com.kodenigaz.desertwind.Targyak.BOGRE;
-import static com.kodenigaz.desertwind.Targyak.TOROTT_BOGRE;
+import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.story.TortenetSzoveg;
+
+import static com.kodenigaz.desertwind.scene.Verzio.VerzioErtek.VERZIO_1;
+import static com.kodenigaz.desertwind.story.Parancs.*;
+import static com.kodenigaz.desertwind.story.Targyak.BOGRE;
+import static com.kodenigaz.desertwind.story.Targyak.TOROTT_BOGRE;
 
 // 2
-class Masodik extends Jelenet {
-    int verzio = 0; // Minden helyszíni classnak több verzioja lehet, ezt a verziot az adott parancs értelmező modosíthatja!
+public class Masodik extends Verzio implements Jelenet {
+    public Masodik() {
+        super();
+    }
+
+    public Masodik(VerzioErtek verzio) {
+        super(verzio);
+    }
 
     @Override
-    void szoveg() {
+    public void szoveg() {
         switch (verzio) {
-            case (0):
+            case VERZIO_0:
                 System.out.println(TortenetSzoveg.MASODIK_SZOVEG_0);
                 break;
-            case (1):
+            case VERZIO_1:
                 System.out.println(TortenetSzoveg.MASODIK_SZOVEG_1);
                 break;
         }
     }
 
     @Override
-    void parancs_Ertelmezo(String parancs) {
+    public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.jelenetszam = JELENET_3;
-                verzio = 1;
+                DesertWind.setJelenet(new Harmadik(VERZIO_1));
                 break;
             }
             case KELETRE_MEGY: {
@@ -45,26 +52,26 @@ class Masodik extends Jelenet {
             }
             case VARAKOZIK: {
                 System.out.println(TortenetSzoveg.MASODIK_VAR);
-                DesertWind.jelenetszam = JELENET_1;
+                DesertWind.setJelenet(new Elso());
                 break;
             }
             case KERES: {
-                if (DesertWind.targyak.contains(BOGRE)) {
+                if (DesertWind.getTargyak().contains(BOGRE)) {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_0);
                     break;
                 } else {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_1);
-                    DesertWind.targyak.add(BOGRE);
+                    DesertWind.getTargyak().add(BOGRE);
                     break;
                 }
             }
             default: {
                 if (parancs.contains(HASZNAL)) {
                     if (parancs.contains(BOGRE)) {
-                        if (DesertWind.targyak.contains(BOGRE)) {
+                        if (DesertWind.getTargyak().contains(BOGRE)) {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
-                            DesertWind.targyak.remove(BOGRE);
-                            DesertWind.targyak.add(TOROTT_BOGRE);
+                            DesertWind.getTargyak().remove(BOGRE);
+                            DesertWind.getTargyak().add(TOROTT_BOGRE);
                         } else {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }

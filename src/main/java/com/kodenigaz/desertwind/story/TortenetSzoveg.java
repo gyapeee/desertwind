@@ -1,6 +1,7 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.story;
 
 public final class TortenetSzoveg {
+    // TODO text would be come from resource file
     public static final String KEZDODIK = "Elkezdődik a kaland, ez az első helyszín...";
     public static final String MASODIK_SZOVEG_0 = "Álmosan kelsz fel. A Nap még fel se jőtt az égre, de neked" + System.lineSeparator() +
             "már dolgoznod kell. Zörgetnek az ajtódon. Sietned kell, vagy újra" + System.lineSeparator() +

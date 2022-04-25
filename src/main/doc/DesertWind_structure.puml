@@ -36,8 +36,8 @@ config=StructureConfiguration;
     "removeByClassName": "",
     "cutMappings": false,
     "cutEnum": true,
-    "cutTests": true,
-    "cutClient": true,
+    "cutTests": false,
+    "cutClient": false,
     "cutDataAccess": false,
     "cutInterfaceStructures": false,
     "cutDataStructures": false,
@@ -45,8 +45,8 @@ config=StructureConfiguration;
     "cutConstructors": true
   },
   "graphTraversal": {
-    "forwardDepth": 6,
-    "backwardDepth": 6,
+    "forwardDepth": 4,
+    "backwardDepth": 4,
     "classPackageExcludeFilter": "",
     "classPackageIncludeFilter": "",
     "classNameExcludeFilter": "",
@@ -56,9 +56,9 @@ config=StructureConfiguration;
     "hideMappings": false,
     "hideDataStructures": false,
     "hidePrivateMethods": true,
-    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "hideInterfaceCalls": false, // indirection: implementation -> interface (is hidden) -> implementation
     "onlyShowApplicationEntryPoints": false, // root node is included
-    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+    "useMethodCallsForStructureDiagram": "BothDirections" // ForwardOnly, BothDirections, No
   },
   "details": {
     "aggregation": "GroupByClass", // ByClass, GroupByClass, None
@@ -67,7 +67,7 @@ config=StructureConfiguration;
     "showMethodParameterNames": true,
     "showMethodParameterTypes": true,
     "showMethodReturnType": true,
-    "showPackageLevels": 2,
+    "showPackageLevels": 3,
     "showDetailedClassStructure": true
   },
   "rootClass": "com.kodenigaz.desertwind.DesertWind",
@@ -99,91 +99,8 @@ subgraph cluster_1606736256 {
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)DesertWind</TD></TR>
 <HR/>
+<TR><TD ALIGN="LEFT" >- isAktualisJelenetHalal(aktualisJelenet: Jelenet): boolean</TD></TR>
 <TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-Harmadik1965813016[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)Harmadik</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
-<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-Hatodik1965813016[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)Hatodik</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
-<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-Jelenet1965813016[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)Jelenet</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >#   verzio: int [1]</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
-<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-Masodik1965813016[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)Masodik</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >#   verzio: int [1]</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
-<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-Negyedik1965813016[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)Negyedik</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
-<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-Otodik1965813016[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)Otodik</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >#   verzio: int [1]</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" ># parancs_Ertelmezo(parancs: String)</TD></TR>
-<TR><TD ALIGN="LEFT" ># szoveg()</TD></TR>
 </TABLE>>
 	style=filled
 	margin=0
@@ -195,15 +112,118 @@ UI1965813016[
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)UI</TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" >#   harmadik: Harmadik [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   hatodik: Hatodik [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   masodik: Masodik [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   negyedik: Negyedik [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   otodik: Otodik [0..1]</TD></TR>
-<HR/>
 <TR><TD ALIGN="LEFT" ># bekero(): String</TD></TR>
-<TR><TD ALIGN="LEFT" ># megjelenito(jelenetszam: JelenetSzam)</TD></TR>
-<TR><TD ALIGN="LEFT" ># parancsertelmezo(jelenetszam: JelenetSzam, parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" ># megjelenito(aktualisJelenet: Jelenet)</TD></TR>
+<TR><TD ALIGN="LEFT" ># parancsertelmezo(aktualisJelenet: Jelenet, parancs: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+subgraph cluster_375531433 { 
+   	label=scene
+	labeljust=l
+	fillcolor="#c4c4c4"
+	style=filled
+   
+   Elso408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Elso</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Harmadik408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Harmadik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Hatodik408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Hatodik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Jelenet408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)Jelenet</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+Masodik408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Masodik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Negyedik408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Negyedik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Otodik408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Otodik</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ parancs_Ertelmezo(parancs: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ szoveg()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Verzio408797238[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Verzio</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   verzio: VerzioErtek [0..1]</TD></TR>
 </TABLE>>
 	style=filled
 	margin=0
@@ -212,23 +232,22 @@ UI1965813016[
 ];
 } 
 } 
+} 
 
 'edges    
-Jelenet1965813016 -> Harmadik1965813016[arrowhead=none, arrowtail=empty, dir=both];
-Jelenet1965813016 -> Hatodik1965813016[arrowhead=none, arrowtail=empty, dir=both];
-Jelenet1965813016 -> Masodik1965813016[arrowhead=none, arrowtail=empty, dir=both];
-Jelenet1965813016 -> Negyedik1965813016[arrowhead=none, arrowtail=empty, dir=both];
-Jelenet1965813016 -> Otodik1965813016[arrowhead=none, arrowtail=empty, dir=both];
-UI1965813016 -> Harmadik1965813016[label="harmadik
-[0..1]"];
-UI1965813016 -> Hatodik1965813016[label="hatodik
-[0..1]"];
-UI1965813016 -> Masodik1965813016[label="masodik
-[0..1]"];
-UI1965813016 -> Negyedik1965813016[label="negyedik
-[0..1]"];
-UI1965813016 -> Otodik1965813016[label="otodik
-[0..1]"];
+Elso408797238 -> Jelenet408797238[arrowhead=empty, arrowtail=none, dir=both];
+Harmadik408797238 -> Jelenet408797238[arrowhead=empty, arrowtail=none, dir=both];
+Hatodik408797238 -> Jelenet408797238[arrowhead=empty, arrowtail=none, dir=both];
+Masodik408797238 -> Jelenet408797238[arrowhead=empty, arrowtail=none, dir=both];
+Negyedik408797238 -> Jelenet408797238[arrowhead=empty, arrowtail=none, dir=both];
+Otodik408797238 -> Jelenet408797238[arrowhead=empty, arrowtail=none, dir=both];
+
+Verzio408797238 -> Elso408797238[arrowhead=none, arrowtail=empty, dir=both];
+Verzio408797238 -> Harmadik408797238[arrowhead=none, arrowtail=empty, dir=both];
+Verzio408797238 -> Hatodik408797238[arrowhead=none, arrowtail=empty, dir=both];
+Verzio408797238 -> Masodik408797238[arrowhead=none, arrowtail=empty, dir=both];
+Verzio408797238 -> Negyedik408797238[arrowhead=none, arrowtail=empty, dir=both];
+Verzio408797238 -> Otodik408797238[arrowhead=none, arrowtail=empty, dir=both];
     
 }
 @enduml

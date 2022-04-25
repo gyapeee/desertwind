@@ -1,4 +1,4 @@
-package com.kodenigaz.desertwind;
+package com.kodenigaz.desertwind.story;
 
 public class Targyak {
     public static final String BOGRE = "bögre";
