@@ -7,7 +7,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.boot.starter.version>2.6.1</spring.boot.starter.version>
+        <spring.boot.starter.version>2.6.6</spring.boot.starter.version>
         <h2.version>2.0.202</h2.version>
         <java.version>11</java.version>
     </properties>
