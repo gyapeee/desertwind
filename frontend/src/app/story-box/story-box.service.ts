@@ -5,13 +5,12 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 
-export class StorBoxService {
+export class StoryBoxService {
 
   constructor(private http: HttpClient) {
   }
 
-  inventory() {
-
+  story() {
     return this.http.get('http://localhost:8081/story',{ responseType: 'text' });
   }
 }

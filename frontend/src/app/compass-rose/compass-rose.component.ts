@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { CompassRoseService } from './compass-rose.service';
 
 @Component({
   selector: 'app-compass-rose',
   templateUrl: './compass-rose.component.html',
-  styleUrls: ['./compass-rose.component.css']
+  styleUrls: ['./compass-rose.component.css'],
 })
 export class CompassRoseComponent implements OnInit {
+  constructor(private compassRoseService: CompassRoseService) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  onMove() {
+    this.compassRoseService.compassRose('-1');
+    console.log('compass rose is called');
   }
-
 }
