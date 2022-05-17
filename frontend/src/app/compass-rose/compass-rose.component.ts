@@ -12,7 +12,9 @@ export class CompassRoseComponent implements OnInit {
   ngOnInit(): void {}
 
   onMove() {
-    this.compassRoseService.compassRose('-1');
+    this.compassRoseService.compassRose('-1').subscribe((response) => {
+      console.log(response);
+    });
     console.log('compass rose is called');
   }
 }
