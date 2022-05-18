@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompassRoseService } from './compass-rose.service';
-import { North } from '../api/directions';
+import { Direction } from '../api/direction';
 
 @Component({
   selector: 'app-compass-rose',
@@ -14,8 +14,9 @@ export class CompassRoseComponent implements OnInit {
 
   onMove(event: any) {
     let buttonText = event.currentTarget.innerText;
-    if (buttonText === North.direction.text)
-      console.log("this is the direction value: " + North.direction.value);
+    
+    if (buttonText === Direction[1])
+      console.log("this is the direction value: " + Direction.Észak);
 
     this.compassRoseService.compassRose('-1').subscribe((response) => {
       console.log(response);
