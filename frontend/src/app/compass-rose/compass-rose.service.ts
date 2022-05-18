@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class CompassRoseService {
   constructor(private http: HttpClient) {}
 
-  compassRose(direction: string) {
+  compassRose(direction: number) {
     // TODO please use constant as a config for URL basic
     // like const URL = http://localhost:8081/
     // TODO URL could be a configurable variable

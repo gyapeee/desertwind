@@ -14,12 +14,27 @@ export class CompassRoseComponent implements OnInit {
 
   onMove(event: any) {
     let buttonText = event.currentTarget.innerText;
-    
-    if (buttonText === Direction[1])
-      console.log("this is the direction value: " + Direction.Észak);
 
-    this.compassRoseService.compassRose('-1').subscribe((response) => {
+    this.compassRoseService.compassRose(this.directionByName(buttonText)).subscribe((response) => {
       console.log(response);
     });
   }
+
+  directionByName(name: string): number{
+    switch(name){
+      case Direction[1]:
+        return Direction.Észak;
+      case Direction[2]:
+        return Direction.Dél;
+      case Direction[3]:
+        return Direction.Kelet;
+      case Direction[4]:
+        return Direction.Nyugat;
+      default:
+        return -1;
+    }
+  }
 }
+
+
+
