@@ -10,6 +10,12 @@ export class ActionComponent implements OnInit {
   constructor(private actionService: ActionService) {}
 
   ngOnInit(): void {
-    this.actionService.action('69');
+
+  }
+
+  onAction(){
+    this.actionService.action('69').subscribe( response => {
+      console.log(response);
+    });
   }
 }
