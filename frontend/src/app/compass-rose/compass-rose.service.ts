@@ -12,7 +12,6 @@ export class CompassRoseService {
     // like const URL = http://localhost:8081/
     // TODO URL could be a configurable variable
     // for different environment like locahost, other servers if needed....
-    console.log(direction);
     return this.http.post('http://localhost:8081/compassrose', direction, {
       responseType: 'json',
     });

@@ -29,13 +29,13 @@ public class BasicApiController {
     }
 
     @PostMapping(value = "/action")
-    public String action(@RequestBody String id) {
+    public Long action(@RequestBody Long id) {
         log.info("Az action id: " + id);
         return id;
     }
 
     @PostMapping(value = "/compassrose")
-    public String compassRose(@RequestBody String direction) {
+    public Long compassRose(@RequestBody Long direction) {
         log.info("A compass rose direction: " + direction);
         return direction;
     }

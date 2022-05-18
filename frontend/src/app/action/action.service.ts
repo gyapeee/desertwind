@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ActionService {
   constructor(private http: HttpClient) {}
 
-  action(id: string) {
+  action(id: number) {
     return this.http.post('http://localhost:8081/action', id);
   }
 }
