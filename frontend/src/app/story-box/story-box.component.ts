@@ -7,11 +7,17 @@ import { StoryBoxService } from './story-box.service';
   styleUrls: ['./story-box.component.css'],
 })
 export class StoryBoxComponent implements OnInit {
+  story: string =""; 
+  
   constructor(private storyBoxService: StoryBoxService) {}
 
   ngOnInit(): void {
     this.storyBoxService
       .story()
-      .subscribe((storyBoxText) => console.log(JSON.stringify(storyBoxText)));
+      .subscribe((storyBoxText) => 
+      {
+        console.log(JSON.stringify(storyBoxText));
+        this.story = storyBoxText;
+      });
   }
 }
