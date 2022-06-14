@@ -23,6 +23,7 @@ public class DesertWind {
 
     public static void main(String[] args) {
         SpringApplication.run(DesertWind.class, args);
+
         System.out.println(TortenetSzoveg.KEZDODIK); //Egyszer majd lesz rendes intro ... :)
         do {
             felulet.megjelenito(aktualisJelenet);  // Megjeleníti az adott helyszín alap szövegét, itt bele kell még kódolni, hogy létezhet olyan hogy változik a helyszín leírása amikor visszamegyünk
