@@ -13,8 +13,8 @@ public class Elso extends Verzio implements Jelenet {
     }
 
     @Override
-    public void szoveg() {
-        System.out.println(HALAL);
+    public String szoveg() {
+        return HALAL;
     }
 
     @Override

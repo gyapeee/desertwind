@@ -1,6 +1,6 @@
 package com.kodenigaz.desertwind.scene;
 
-import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.UI;
 import com.kodenigaz.desertwind.story.Parancs;
 import com.kodenigaz.desertwind.story.TortenetSzoveg;
 
@@ -14,8 +14,8 @@ public class Hatodik extends Verzio implements Jelenet {
     }
 
     @Override
-    public void szoveg() {
-        System.out.println(TortenetSzoveg.HATODIK_SZOVEG);
+    public String szoveg() {
+        return TortenetSzoveg.HATODIK_SZOVEG;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Hatodik extends Verzio implements Jelenet {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.setJelenet(new Otodik());
+                UI.setJelenet(new Otodik());
                 break;
             }
             case Parancs.DELRE_MEGY: {

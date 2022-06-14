@@ -1,36 +1,35 @@
 <div class="container">
-    <div class="row">
-      <div class="col"></div>
-      <div class="col d-grid">
-        <button type="button" href="#" class="btn btn-primary col">
-          Észak
-        </button>
-      </div>
-      <div class="col"></div>
-      <div class="col-9"></div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col d-grid">
+      <button
+        (click)="onMove($event)"
+        type="button"
+        href="#"
+        class="btn btn-primary col"
+      >
+        Észak
+      </button>
     </div>
-    <div class="row">
-      <div class="col d-grid">
-        <button type="button" href="#" class="btn btn-primary col">
-          Nyugat
-        </button>
-      </div>
-      <div class="col"></div>
-      <div class="col d-grid">
-        <button type="button" href="#" class="btn btn-primary col">
-          Kelet
-        </button>
-      </div>
-      <div class="col-9"></div>
-    </div>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col d-grid">
-        <button type="button" href="#" class="btn btn-primary col">
-          Dél
-        </button>
-      </div>
-      <div class="col"></div>
-      <div class="col-9"></div>
-    </div>
+    <div class="col"></div>
+    <div class="col-9"></div>
   </div>
+  <div class="row">
+    <div class="col d-grid">
+      <button (click)="onMove($event)" type="button" href="#" class="btn btn-primary col">Nyugat</button>
+    </div>
+    <div class="col"></div>
+    <div class="col d-grid">
+      <button (click)="onMove($event)" type="button" href="#" class="btn btn-primary col">Kelet</button>
+    </div>
+    <div class="col-9"></div>
+  </div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col d-grid">
+      <button (click)="onMove($event)" type="button" href="#" class="btn btn-primary col">Dél</button>
+    </div>
+    <div class="col"></div>
+    <div class="col-9"></div>
+  </div>
+</div>

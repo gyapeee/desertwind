@@ -1,6 +1,6 @@
 package com.kodenigaz.desertwind.scene;
 
-import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.UI;
 import com.kodenigaz.desertwind.story.Parancs;
 import com.kodenigaz.desertwind.story.TortenetSzoveg;
 
@@ -17,14 +17,14 @@ public class Negyedik extends Verzio implements Jelenet {
     }
 
     @Override
-    public void szoveg() {
+    public String szoveg() {
         switch (verzio) {
             case VERZIO_0:
-                System.out.println(TortenetSzoveg.NEGYEDIK_SZOVEG_0);
-                break;
+                return TortenetSzoveg.NEGYEDIK_SZOVEG_0;
             case VERZIO_1:
-                System.out.println(TortenetSzoveg.NEGYEDIK_SZOVEG_1);
-                break;
+                return TortenetSzoveg.NEGYEDIK_SZOVEG_1;
+            default:
+                return TortenetSzoveg.ERROR;
         }
     }
 
@@ -32,7 +32,7 @@ public class Negyedik extends Verzio implements Jelenet {
     public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case Parancs.DELRE_MEGY:
-                DesertWind.setJelenet(new Otodik(VERZIO_1));
+                UI.setJelenet(new Otodik(VERZIO_1));
                 break;
             case Parancs.ESZAKRA_MEGY:
             case Parancs.NYUGATRA_MEGY:
@@ -41,7 +41,7 @@ public class Negyedik extends Verzio implements Jelenet {
                 break;
             case Parancs.VARAKOZIK:
                 System.out.println(TortenetSzoveg.NEGYEDIK_VAR);
-                DesertWind.setJelenet(new Elso());
+                UI.setJelenet(new Elso());
                 break;
             case Parancs.KERES:
                 System.out.println(TortenetSzoveg.NEGYEDIK_KER);

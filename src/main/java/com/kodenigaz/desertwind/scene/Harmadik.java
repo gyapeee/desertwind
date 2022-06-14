@@ -1,6 +1,6 @@
 package com.kodenigaz.desertwind.scene;
 
-import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.UI;
 import com.kodenigaz.desertwind.story.Parancs;
 import com.kodenigaz.desertwind.story.TortenetSzoveg;
 
@@ -16,15 +16,15 @@ public class Harmadik extends Verzio implements Jelenet {
     }
 
     @Override
-    public void szoveg() {
-        System.out.println(TortenetSzoveg.HARMADIK_SZOVEG);
+    public String szoveg() {
+        return TortenetSzoveg.HARMADIK_SZOVEG;
     }
 
     @Override
     public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY:
-                DesertWind.setJelenet(new Negyedik());
+                UI.setJelenet(new Negyedik());
                 break;
             case Parancs.KELETRE_MEGY:
             case Parancs.DELRE_MEGY:
@@ -33,7 +33,7 @@ public class Harmadik extends Verzio implements Jelenet {
                 break;
             case Parancs.VARAKOZIK:
                 System.out.println(TortenetSzoveg.HARMADIK_VAR);
-                DesertWind.setJelenet(new Negyedik());
+                UI.setJelenet(new Negyedik());
                 break;
             case Parancs.KERES:
                 System.out.println(TortenetSzoveg.HARMADIK_KER);

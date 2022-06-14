@@ -1,6 +1,6 @@
 package com.kodenigaz.desertwind.scene;
 
-import com.kodenigaz.desertwind.DesertWind;
+import com.kodenigaz.desertwind.UI;
 import com.kodenigaz.desertwind.story.Parancs;
 import com.kodenigaz.desertwind.story.TortenetSzoveg;
 
@@ -18,17 +18,17 @@ public class Otodik extends Verzio implements Jelenet {
     }
 
     @Override
-    public void szoveg() {
+    public String szoveg() {
         switch (verzio) {
             case VERZIO_0:
-                System.out.println(TortenetSzoveg.OTODIK_SZOVEG_0);
-                if (!(DesertWind.getTargyak().contains(GYURU))) {
-                    System.out.println(TortenetSzoveg.OTODIK_GYURU);
+                if (!(UI.getTargyak().contains(GYURU))) {
+                    return TortenetSzoveg.OTODIK_GYURU;
                 }
-                break;
+                return TortenetSzoveg.OTODIK_SZOVEG_0;
             case VERZIO_1:
-                System.out.println(TortenetSzoveg.OTODIK_SZOVEG_1);
-                break;
+                return TortenetSzoveg.OTODIK_SZOVEG_1;
+            default:
+                return TortenetSzoveg.ERROR;
         }
     }
 
@@ -37,7 +37,7 @@ public class Otodik extends Verzio implements Jelenet {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                DesertWind.setJelenet(new Negyedik());
+                UI.setJelenet(new Negyedik());
                 break;
             }
             case Parancs.KELETRE_MEGY: {
@@ -47,7 +47,7 @@ public class Otodik extends Verzio implements Jelenet {
             }
             case Parancs.DELRE_MEGY: {
                 System.out.println(TortenetSzoveg.DEL);
-                DesertWind.setJelenet(new Hatodik());
+                UI.setJelenet(new Hatodik());
                 break;
             }
             case Parancs.NYUGATRA_MEGY: {
@@ -56,26 +56,26 @@ public class Otodik extends Verzio implements Jelenet {
             }
             case VARAKOZIK: {
                 System.out.println(TortenetSzoveg.OTODIK_VAR);
-                DesertWind.setJelenet(new Otodik());
+                UI.setJelenet(new Otodik());
                 break;
             }
             case KERES: {
-                if (DesertWind.getTargyak().contains(GYURU)) {
+                if (UI.getTargyak().contains(GYURU)) {
                     System.out.println(TortenetSzoveg.OTODIK_KER_GYURU);
                     break;
                 } else {
                     System.out.println(TortenetSzoveg.OTODIK_KER);
-                    DesertWind.getTargyak().add(GYURU);
+                    UI.getTargyak().add(GYURU);
                     break;
                 }
             }
             default: {
                 if (parancs.contains(HASZNAL)) {
                     if (parancs.contains(BOGRE)) {
-                        if (DesertWind.getTargyak().contains(BOGRE)) {
+                        if (UI.getTargyak().contains(BOGRE)) {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
-                            DesertWind.getTargyak().remove(BOGRE);
-                            DesertWind.getTargyak().add(TOROTT_BOGRE);
+                            UI.getTargyak().remove(BOGRE);
+                            UI.getTargyak().add(TOROTT_BOGRE);
                         } else {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }

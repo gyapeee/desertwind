@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
-export class InventoryService {
+export class LocationBoxService {
   constructor(private http: HttpClient) {}
 
-  inventory() {
-    return this.http.get('http://localhost:8081/inventory', {
+  location() {
+    return this.http.get('http://localhost:8081/location', {
       responseType: 'text',
     });
   }

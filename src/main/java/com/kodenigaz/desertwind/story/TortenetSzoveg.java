@@ -78,5 +78,5 @@ public final class TortenetSzoveg {
     public static final String HELP_NINCS_IRANYITAS = "Te most segítséget kértél a játék irányításában. Egyelőre sajnos nem lehet irányitani....";
     public static final String NALAD_LEVO_TARGYAK = "Nálad lévő tárgyak: ";
 
-
+    public static final String ERROR = "Hiba történt!";
 }
