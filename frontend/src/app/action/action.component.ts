@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionUtil } from '../api/action';
 import { ActionService } from './action.service';
 
 @Component({
@@ -16,7 +15,7 @@ export class ActionComponent implements OnInit {
 
   onAction(event: any){
     let buttonText = event.currentTarget.innerText;
-    this.actionService.action(ActionUtil.actionByName(buttonText)).subscribe( response => {
+    this.actionService.action(buttonText).subscribe( response => {
       console.log(response);
     });
   }

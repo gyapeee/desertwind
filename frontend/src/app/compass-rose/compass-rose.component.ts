@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompassRoseService } from './compass-rose.service';
-import { Direction, DirectionUtil } from '../api/direction';
+import { Szoveg } from '../api/Szoveg';
 
 @Component({
   selector: 'app-compass-rose',
@@ -15,10 +15,13 @@ export class CompassRoseComponent implements OnInit {
   onMove(event: any) {
     let buttonText = event.currentTarget.innerText;
 
-    this.compassRoseService.compassRose(DirectionUtil.directionByName(buttonText)).subscribe((response) => {
+    this.compassRoseService.compassRose(buttonText).subscribe((response: Szoveg) => {
       console.log(response);
+      this.compassRoseService.currentStory.next(response.szoveg);
     });
   }
+
+
 
 
 }

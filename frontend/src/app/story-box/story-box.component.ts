@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompassRoseService } from '../compass-rose/compass-rose.service';
 import { StoryBoxService } from './story-box.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { StoryBoxService } from './story-box.service';
 export class StoryBoxComponent implements OnInit {
   story: string =""; 
   
-  constructor(private storyBoxService: StoryBoxService) {}
+  constructor(private storyBoxService: StoryBoxService, private compassRoseService: CompassRoseService) {}
 
   ngOnInit(): void {
     this.storyBoxService
@@ -19,5 +20,12 @@ export class StoryBoxComponent implements OnInit {
         console.log(JSON.stringify(storyBoxText));
         this.story = storyBoxText;
       });
-  }
+
+  this.compassRoseService.currentStory.subscribe((story)=> {
+    console.log(story);
+    if (story !== null){
+      this.story = story;
+    }  
+  });
+ }
 }
