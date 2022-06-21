@@ -1,9 +1,7 @@
-package com.kodenigaz.desertwind.controller;
+package com.koden.igaz.desertwind.controller;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.kodenigaz.desertwind.UI;
-import com.kodenigaz.desertwind.dto.SzovegDTO;
+import com.koden.igaz.desertwind.dto.SzovegDTO;
+import com.koden.igaz.desertwind.UI;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.kodenigaz.desertwind.dto;
+package com.koden.igaz.desertwind.dto;
 
 public class UserDTO {
 

@@ -68,7 +68,7 @@
                     <executions>
                         <execution>
                             <configuration>
-                                <mainClass>com.kodenigaz.desertwind.DesertWind</mainClass>
+                                <mainClass>com.koden.igaz.desertwind.DesertWind</mainClass>
                             </configuration>
                         </execution>
                     </executions>

@@ -1,6 +1,5 @@
-package com.kodenigaz.desertwind;
+package com.koden.igaz.desertwind;
 
-import com.kodenigaz.desertwind.story.TortenetSzoveg;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

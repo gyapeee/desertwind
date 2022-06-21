@@ -1,13 +1,9 @@
-package com.kodenigaz.desertwind.scene;
+package com.koden.igaz.desertwind.scene;
 
-import com.kodenigaz.desertwind.UI;
-import com.kodenigaz.desertwind.story.TortenetSzoveg;
-
-import static com.kodenigaz.desertwind.scene.Verzio.VerzioErtek.VERZIO_1;
-import static com.kodenigaz.desertwind.story.Parancs.*;
-import static com.kodenigaz.desertwind.story.Targyak.BOGRE;
-import static com.kodenigaz.desertwind.story.Targyak.TOROTT_BOGRE;
-import static com.kodenigaz.desertwind.story.TortenetSzoveg.ERROR;
+import com.koden.igaz.desertwind.story.Parancs;
+import com.koden.igaz.desertwind.story.Targyak;
+import com.koden.igaz.desertwind.story.TortenetSzoveg;
+import com.koden.igaz.desertwind.UI;
 
 // 2
 public class Masodik extends Verzio implements Jelenet {
@@ -34,45 +30,45 @@ public class Masodik extends Verzio implements Jelenet {
     @Override
     public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
-            case ESZAKRA_MEGY: {
+            case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                UI.setJelenet(new Harmadik(VERZIO_1));
+                UI.setJelenet(new Harmadik(VerzioErtek.VERZIO_1));
                 break;
             }
-            case KELETRE_MEGY: {
+            case Parancs.KELETRE_MEGY: {
                 System.out.println(TortenetSzoveg.MASODIK_K);
                 break;
             }
-            case DELRE_MEGY: {
+            case Parancs.DELRE_MEGY: {
                 System.out.println(TortenetSzoveg.MASODIK_D);
                 break;
             }
-            case NYUGATRA_MEGY: {
+            case Parancs.NYUGATRA_MEGY: {
                 System.out.println(TortenetSzoveg.MASODIK_N);
                 break;
             }
-            case VARAKOZIK: {
+            case Parancs.VARAKOZIK: {
                 System.out.println(TortenetSzoveg.MASODIK_VAR);
                 UI.setJelenet(new Elso());
                 break;
             }
-            case KERES: {
-                if (UI.getTargyak().contains(BOGRE)) {
+            case Parancs.KERES: {
+                if (UI.getTargyak().contains(Targyak.BOGRE)) {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_0);
                     break;
                 } else {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_1);
-                    UI.getTargyak().add(BOGRE);
+                    UI.getTargyak().add(Targyak.BOGRE);
                     break;
                 }
             }
             default: {
-                if (parancs.contains(HASZNAL)) {
-                    if (parancs.contains(BOGRE)) {
-                        if (UI.getTargyak().contains(BOGRE)) {
+                if (parancs.contains(Parancs.HASZNAL)) {
+                    if (parancs.contains(Targyak.BOGRE)) {
+                        if (UI.getTargyak().contains(Targyak.BOGRE)) {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
-                            UI.getTargyak().remove(BOGRE);
-                            UI.getTargyak().add(TOROTT_BOGRE);
+                            UI.getTargyak().remove(Targyak.BOGRE);
+                            UI.getTargyak().add(Targyak.TOROTT_BOGRE);
                         } else {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }

@@ -1,4 +1,4 @@
-package com.kodenigaz.desertwind.story;
+package com.koden.igaz.desertwind.story;
 
 public class Parancs {
     public static final String ESZAKRA_MEGY = "Észak";

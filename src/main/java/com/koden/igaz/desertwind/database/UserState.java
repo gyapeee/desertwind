@@ -1,4 +1,4 @@
-package com.kodenigaz.desertwind.database;
+package com.koden.igaz.desertwind.database;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

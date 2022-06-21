@@ -1,6 +1,6 @@
-package com.kodenigaz.desertwind.scene;
+package com.koden.igaz.desertwind.scene;
 
-import static com.kodenigaz.desertwind.story.TortenetSzoveg.HALAL;
+import com.koden.igaz.desertwind.story.TortenetSzoveg;
 
 // 1
 public class Elso extends Verzio implements Jelenet {
@@ -14,11 +14,11 @@ public class Elso extends Verzio implements Jelenet {
 
     @Override
     public String szoveg() {
-        return HALAL;
+        return TortenetSzoveg.HALAL;
     }
 
     @Override
     public void parancs_Ertelmezo(String parancs) {
-        System.out.println(HALAL);
+        System.out.println(TortenetSzoveg.HALAL);
     }
 }

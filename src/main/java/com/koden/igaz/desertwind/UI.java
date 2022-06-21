@@ -1,16 +1,15 @@
-package com.kodenigaz.desertwind;
+package com.koden.igaz.desertwind;
 
-import com.kodenigaz.desertwind.scene.Elso;
-import com.kodenigaz.desertwind.scene.Jelenet;
-import com.kodenigaz.desertwind.scene.Masodik;
+import com.koden.igaz.desertwind.scene.Elso;
+import com.koden.igaz.desertwind.scene.Jelenet;
+import com.koden.igaz.desertwind.scene.Masodik;
+import com.koden.igaz.desertwind.story.Parancs;
+import com.koden.igaz.desertwind.story.TortenetSzoveg;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import static com.kodenigaz.desertwind.story.Parancs.*;
-import static com.kodenigaz.desertwind.story.TortenetSzoveg.*;
 
 @Service
 public class UI {
@@ -43,9 +42,9 @@ public class UI {
 
     String bekero() {
         Scanner bekero = new Scanner(System.in);
-        System.out.println(MIT_TESZEL + System.lineSeparator());
+        System.out.println(TortenetSzoveg.MIT_TESZEL + System.lineSeparator());
         beolvasottParancs = bekero.nextLine();
-        if (beolvasottParancs.contains(ONGYILKOS)) {
+        if (beolvasottParancs.contains(Parancs.ONGYILKOS)) {
             setJelenet(new Elso());
         }
         return beolvasottParancs;

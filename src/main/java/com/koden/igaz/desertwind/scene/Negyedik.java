@@ -1,10 +1,8 @@
-package com.kodenigaz.desertwind.scene;
+package com.koden.igaz.desertwind.scene;
 
-import com.kodenigaz.desertwind.UI;
-import com.kodenigaz.desertwind.story.Parancs;
-import com.kodenigaz.desertwind.story.TortenetSzoveg;
-
-import static com.kodenigaz.desertwind.scene.Verzio.VerzioErtek.VERZIO_1;
+import com.koden.igaz.desertwind.story.Parancs;
+import com.koden.igaz.desertwind.story.TortenetSzoveg;
+import com.koden.igaz.desertwind.UI;
 
 public class Negyedik extends Verzio implements Jelenet {
 
@@ -32,7 +30,7 @@ public class Negyedik extends Verzio implements Jelenet {
     public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case Parancs.DELRE_MEGY:
-                UI.setJelenet(new Otodik(VERZIO_1));
+                UI.setJelenet(new Otodik(VerzioErtek.VERZIO_1));
                 break;
             case Parancs.ESZAKRA_MEGY:
             case Parancs.NYUGATRA_MEGY:

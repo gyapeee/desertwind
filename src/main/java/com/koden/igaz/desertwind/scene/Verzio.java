@@ -1,4 +1,4 @@
-package com.kodenigaz.desertwind.scene;
+package com.koden.igaz.desertwind.scene;
 
 abstract public class Verzio {
     public enum VerzioErtek {

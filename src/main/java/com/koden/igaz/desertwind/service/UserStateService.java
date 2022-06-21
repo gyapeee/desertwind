@@ -1,7 +1,7 @@
-package com.kodenigaz.desertwind.service;
+package com.koden.igaz.desertwind.service;
 
-import com.kodenigaz.desertwind.database.UserState;
-import com.kodenigaz.desertwind.database.UserStateRepository;
+import com.koden.igaz.desertwind.database.UserState;
+import com.koden.igaz.desertwind.database.UserStateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

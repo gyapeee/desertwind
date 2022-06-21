@@ -1,4 +1,4 @@
-package com.kodenigaz.desertwind.database;
+package com.koden.igaz.desertwind.database;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
