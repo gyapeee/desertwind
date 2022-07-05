@@ -2,7 +2,7 @@ package com.koden.igaz.desertwind.scene;
 
 import com.koden.igaz.desertwind.story.Parancs;
 import com.koden.igaz.desertwind.story.TortenetSzoveg;
-import com.koden.igaz.desertwind.UI;
+import com.koden.igaz.desertwind.UserDataService;
 
 public class Hatodik extends Verzio implements Jelenet {
     public Hatodik() {
@@ -23,7 +23,7 @@ public class Hatodik extends Verzio implements Jelenet {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                UI.setJelenet(new Otodik());
+                UserDataService.setJelenet(new Otodik());
                 break;
             }
             case Parancs.DELRE_MEGY: {

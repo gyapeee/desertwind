@@ -3,7 +3,7 @@ package com.koden.igaz.desertwind.scene;
 import com.koden.igaz.desertwind.story.Parancs;
 import com.koden.igaz.desertwind.story.Targyak;
 import com.koden.igaz.desertwind.story.TortenetSzoveg;
-import com.koden.igaz.desertwind.UI;
+import com.koden.igaz.desertwind.UserDataService;
 
 // 2
 public class Masodik extends Verzio implements Jelenet {
@@ -32,7 +32,7 @@ public class Masodik extends Verzio implements Jelenet {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY: {
                 System.out.println(TortenetSzoveg.ESZAK);
-                UI.setJelenet(new Harmadik(VerzioErtek.VERZIO_1));
+                UserDataService.setJelenet(new Harmadik(VerzioErtek.VERZIO_1));
                 break;
             }
             case Parancs.KELETRE_MEGY: {
@@ -49,26 +49,26 @@ public class Masodik extends Verzio implements Jelenet {
             }
             case Parancs.VARAKOZIK: {
                 System.out.println(TortenetSzoveg.MASODIK_VAR);
-                UI.setJelenet(new Elso());
+                UserDataService.setJelenet(new Elso());
                 break;
             }
             case Parancs.KERES: {
-                if (UI.getTargyak().contains(Targyak.BOGRE)) {
-                    System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_0);
+                if (UserDataService.getTargyak().contains(Targyak.BOGRE)) {
+                    System.out.println(TortenetSzoveg.NEM_TALALSZ_SEMMI_ERDEKESET);
                     break;
                 } else {
                     System.out.println(TortenetSzoveg.MASODIK_KER_BOGRE_1);
-                    UI.getTargyak().add(Targyak.BOGRE);
+                    UserDataService.getTargyak().add(Targyak.BOGRE);
                     break;
                 }
             }
             default: {
                 if (parancs.contains(Parancs.HASZNAL)) {
                     if (parancs.contains(Targyak.BOGRE)) {
-                        if (UI.getTargyak().contains(Targyak.BOGRE)) {
+                        if (UserDataService.getTargyak().contains(Targyak.BOGRE)) {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_0);
-                            UI.getTargyak().remove(Targyak.BOGRE);
-                            UI.getTargyak().add(Targyak.TOROTT_BOGRE);
+                            UserDataService.getTargyak().remove(Targyak.BOGRE);
+                            UserDataService.getTargyak().add(Targyak.TOROTT_BOGRE);
                         } else {
                             System.out.println(TortenetSzoveg.OTODIK_BOGRE_1);
                         }

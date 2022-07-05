@@ -2,7 +2,7 @@ package com.koden.igaz.desertwind.scene;
 
 import com.koden.igaz.desertwind.story.Parancs;
 import com.koden.igaz.desertwind.story.TortenetSzoveg;
-import com.koden.igaz.desertwind.UI;
+import com.koden.igaz.desertwind.UserDataService;
 
 // 3
 public class Harmadik extends Verzio implements Jelenet {
@@ -24,7 +24,7 @@ public class Harmadik extends Verzio implements Jelenet {
     public void parancs_Ertelmezo(String parancs) {
         switch (parancs) {
             case Parancs.ESZAKRA_MEGY:
-                UI.setJelenet(new Negyedik());
+                UserDataService.setJelenet(new Negyedik());
                 break;
             case Parancs.KELETRE_MEGY:
             case Parancs.DELRE_MEGY:
@@ -33,7 +33,7 @@ public class Harmadik extends Verzio implements Jelenet {
                 break;
             case Parancs.VARAKOZIK:
                 System.out.println(TortenetSzoveg.HARMADIK_VAR);
-                UI.setJelenet(new Negyedik());
+                UserDataService.setJelenet(new Negyedik());
                 break;
             case Parancs.KERES:
                 System.out.println(TortenetSzoveg.HARMADIK_KER);

@@ -48,7 +48,7 @@ public final class TortenetSzoveg {
     public static final String MASODIK_VAR = "Hát ezt nem kellett volna. A katonák betőrik az ajtódat, hogy megnézzék, mért" + System.lineSeparator() +
             "nem jőssz már. Mikor meglátnak ott lustálkodni, talpra  állítanak és  " + System.lineSeparator() +
             "kivonszolnak. A helyszínen agyonlőnek.";
-    public static final String MASODIK_KER_BOGRE_0 = "Nem találsz semmi érdekeset!";
+    public static final String NEM_TALALSZ_SEMMI_ERDEKESET = "Nem találsz semmi érdekeset!";
     public static final String MASODIK_KER_BOGRE_1 = "Nagy meglepetésedre találsz egy bögrét";
 
     public static final String HARMADIK_K_D_NY = "Jobb lesz ha nem erre mész. A katonák ezt nem szívlelnék.";
@@ -59,7 +59,7 @@ public final class TortenetSzoveg {
     public static final String NEGYEDIK_VAR = "Na ezt nem kellett volna. A hullák elkezdenek rothadni. A bűz olyan elviselhetetlen hogy öngyilkos leszel.";
     public static final String NEGYEDIK_KER = "A halott katonáknál volt egy csomó fegyver, de te egyiket sem tudod használni.";
 
-    public static final String OTODIK_GYURU = "Valami fénylő tárgyat látsz tőled 10 méterre.";
+
     public static final String ESZAK = "Elindulsz északnak!";
     public static final String KELET = "Elindulsz keletnek!";
     public static final String DEL = "Elindulsz délnek!";
@@ -67,7 +67,7 @@ public final class TortenetSzoveg {
     public static final String OTODIK_VAR = "Hát ezt nem kellett volna. A katonák betőrik az ajtódat, hogy megnézzék, mért" + System.lineSeparator() +
             "nem jőssz már. Mikor meglátnak ott lustálkodni, talpra  állítanak és  " + System.lineSeparator() +
             "kivonszolnak. A helyszínen agyonlőnek.";
-    public static final String OTODIK_KER_GYURU = "Nem találsz semmi érdekeset!";
+    public static final String OTODIK_GYURU = "Valami fénylő tárgyat látsz tőled 10 méterre.";
     public static final String OTODIK_KER = "Egy gyűrűt találtál. Jobban megnézve észreveszed, hogy rá van vésve: For the glory of the FoD!! Fogalmad sincs hogy ez mit jelenthet, de azért elteszed.";
     public static final String OTODIK_BOGRE_0 = "Jobb hijján fejbe vered magad a bögréddel, ami így eltörik és lesz egy törött bögréd.";
     public static final String OTODIK_BOGRE_1 = "Nincs nálad ép bögre!";

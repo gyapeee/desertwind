@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kodenigaz.desertwind</groupId>
+    <groupId>com.koden.igaz.desertwind</groupId>
     <artifactId>desertwind</artifactId>
     <version>1.0.0</version>
 
@@ -16,6 +16,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
             <version>${spring.boot.starter.version}</version>
         </dependency>
         <dependency>
@@ -77,8 +82,8 @@
         </pluginManagement>
 
     </build>
-<!--    <repository>-->
-<!--        <id>maven repo</id>-->
-<!--        <url>http://central.maven.org/maven2/</url>-->
-<!--    </repository>-->
+    <!--    <repository>-->
+    <!--        <id>maven repo</id>-->
+    <!--        <url>http://central.maven.org/maven2/</url>-->
+    <!--    </repository>-->
 </project>

@@ -1,7 +1,15 @@
 package com.koden.igaz.desertwind.dto;
 
+import java.util.List;
+import java.util.Map;
+
 public class UserDTO {
 
+    public String aktualisJelenetName;
+
+    public List<String> inventory;
+
+    public Map<String, Integer> jelenetVerziok;
     private String userName;
     private String password;
 

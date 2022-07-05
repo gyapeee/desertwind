@@ -1,7 +1,7 @@
 package com.koden.igaz.desertwind.controller;
 
 import com.koden.igaz.desertwind.dto.SzovegDTO;
-import com.koden.igaz.desertwind.UI;
+import com.koden.igaz.desertwind.UserDataService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 public class BasicApiController {
 
     @Autowired
-    UI ui;
+    UserDataService userDataService;
 
     @GetMapping(value = "/inventory", produces = "text/plain")
     @ResponseBody
@@ -25,7 +25,7 @@ public class BasicApiController {
     @GetMapping(value = "/story", produces = "text/plain")
     @ResponseBody
     public String story(HttpServletRequest request) {
-        return ui.szoveg();
+        return userDataService.szoveg();
     }
 
     @GetMapping(value = "/location", produces = "text/plain")
@@ -40,12 +40,12 @@ public class BasicApiController {
         return id;
     }
 
-    @PostMapping(value = "/compassrose")//, produces = "application/json" )
+    @PostMapping(value = "/compassrose")
     @ResponseBody
     public SzovegDTO compassRose(@RequestBody String direction) {
-        ui.parancsertelmezo(direction);
+        userDataService.parancsertelmezo(direction);
         log.info("A compass rose direction: " + direction);
 
-        return new SzovegDTO(ui.szoveg());
+        return new SzovegDTO(userDataService.szoveg());
     }
 }
