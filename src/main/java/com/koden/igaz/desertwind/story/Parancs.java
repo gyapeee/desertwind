@@ -9,4 +9,8 @@ public class Parancs {
     public static final String KERES = "Keresek";
     public static final String ONGYILKOS = "Öngyilkos leszek";
     public static final String HASZNAL = "Használom";
+    public static final String VIZSGAL = "Vizsgalom";
+    public static final String IGEN = "Igen";
+    public static final String NEM = "Nem";
+
 }

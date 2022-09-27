@@ -3,7 +3,6 @@ package com.koden.igaz.desertwind;
 import com.koden.igaz.desertwind.dto.UserDTO;
 import com.koden.igaz.desertwind.scene.Elso;
 import com.koden.igaz.desertwind.scene.Jelenet;
-import com.koden.igaz.desertwind.scene.Masodik;
 import com.koden.igaz.desertwind.story.Parancs;
 import com.koden.igaz.desertwind.story.TortenetSzoveg;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,7 @@ import java.util.Scanner;
 public class UserDataService {
     static UserDTO user = new UserDTO();
     static String beolvasottParancs;
-    static Jelenet aktualisJelenet = new Masodik();
+    static Jelenet aktualisJelenet = null;
     //Az eredeti programban is volt egy globális változó, Az első helyszín megegyezés szerint a 2-es. az 1-es hely a halál és a játék vége
     static String parancs = "";
     // TODO is it possible that User should have targyak?

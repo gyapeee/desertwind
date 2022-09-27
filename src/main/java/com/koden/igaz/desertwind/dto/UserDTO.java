@@ -28,4 +28,28 @@ public class UserDTO {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getAktualisJelenetName() {
+        return aktualisJelenetName;
+    }
+
+    public void setAktualisJelenetName(String aktualisJelenetName) {
+        this.aktualisJelenetName = aktualisJelenetName;
+    }
+
+    public List<String> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(List<String> inventory) {
+        this.inventory = inventory;
+    }
+
+    public Map<String, Integer> getJelenetVerziok() {
+        return jelenetVerziok;
+    }
+
+    public void setJelenetVerziok(Map<String, Integer> jelenetVerziok) {
+        this.jelenetVerziok = jelenetVerziok;
+    }
 }

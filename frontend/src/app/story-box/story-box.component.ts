@@ -8,24 +8,23 @@ import { StoryBoxService } from './story-box.service';
   styleUrls: ['./story-box.component.css'],
 })
 export class StoryBoxComponent implements OnInit {
-  story: string =""; 
-  
+  story: string ="";
+
   constructor(private storyBoxService: StoryBoxService, private compassRoseService: CompassRoseService) {}
 
   ngOnInit(): void {
     this.storyBoxService
-      .story()
-      .subscribe((storyBoxText) => 
+      .story(2)
+      .subscribe((storyBoxText) =>
       {
         console.log(JSON.stringify(storyBoxText));
-        this.story = storyBoxText;
       });
 
   this.compassRoseService.currentStory.subscribe((story)=> {
     console.log(story);
     if (story !== null){
       this.story = story;
-    }  
+    }
   });
  }
 }

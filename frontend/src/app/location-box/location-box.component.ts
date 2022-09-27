@@ -10,10 +10,10 @@ export class LocationBoxComponent implements OnInit {
   constructor(private locationBoxService: LocationBoxService) {}
 
   ngOnInit(): void {
-    this.locationBoxService
-      .location()
-      .subscribe((locationBoxText) =>
-        console.log(JSON.stringify(locationBoxText))
-      );
+//     this.locationBoxService
+//       .location()
+//       .subscribe((locationBoxText) =>
+//         console.log(JSON.stringify(locationBoxText))
+//       );
   }
 }
