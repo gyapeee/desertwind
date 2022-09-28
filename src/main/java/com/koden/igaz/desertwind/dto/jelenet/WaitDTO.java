@@ -3,9 +3,10 @@ package com.koden.igaz.desertwind.dto.jelenet;
 public class WaitDTO {
     public String szoveg;
     public boolean isDead;
-    public int goToJelent;
+    public int goToJelenet;
 
     public WaitDTO() {
+        // this is a DTO so no need to add code here
     }
 
     public String getSzoveg() {
@@ -16,8 +17,8 @@ public class WaitDTO {
         return this.isDead;
     }
 
-    public int getGoToJelent() {
-        return this.goToJelent;
+    public int getGoToJelenet() {
+        return this.goToJelenet;
     }
 
     public void setSzoveg(String szoveg) {
@@ -28,8 +29,8 @@ public class WaitDTO {
         this.isDead = isDead;
     }
 
-    public void setGoToJelent(int goToJelent) {
-        this.goToJelent = goToJelent;
+    public void setGoToJelenet(int goToJelenet) {
+        this.goToJelenet = goToJelenet;
     }
 
     public boolean equals(final Object o) {
@@ -41,7 +42,7 @@ public class WaitDTO {
         final Object other$szoveg = other.getSzoveg();
         if (this$szoveg == null ? other$szoveg != null : !this$szoveg.equals(other$szoveg)) return false;
         if (this.isDead() != other.isDead()) return false;
-        if (this.getGoToJelent() != other.getGoToJelent()) return false;
+        if (this.getGoToJelenet() != other.getGoToJelenet()) return false;
         return true;
     }
 
@@ -55,11 +56,11 @@ public class WaitDTO {
         final Object $szoveg = this.getSzoveg();
         result = result * PRIME + ($szoveg == null ? 43 : $szoveg.hashCode());
         result = result * PRIME + (this.isDead() ? 79 : 97);
-        result = result * PRIME + this.getGoToJelent();
+        result = result * PRIME + this.getGoToJelenet();
         return result;
     }
 
     public String toString() {
-        return "WaitDTO(szoveg=" + this.getSzoveg() + ", isDead=" + this.isDead() + ", goToJelent=" + this.getGoToJelent() + ")";
+        return "WaitDTO(szoveg=" + this.getSzoveg() + ", isDead=" + this.isDead() + ", goToJelent=" + this.getGoToJelenet() + ")";
     }
 }

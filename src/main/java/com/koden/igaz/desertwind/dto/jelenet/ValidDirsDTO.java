@@ -2,25 +2,26 @@ package com.koden.igaz.desertwind.dto.jelenet;
 
 public class ValidDirsDTO {
     public String name;
-    public int goToJelent;
+    public int goToJelenet;
 
     public ValidDirsDTO() {
+        // this is a DTO so no need to add code here
     }
 
     public String getName() {
         return this.name;
     }
 
-    public int getGoToJelent() {
-        return this.goToJelent;
+    public int getGoToJelenet() {
+        return this.goToJelenet;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setGoToJelent(int goToJelent) {
-        this.goToJelent = goToJelent;
+    public void setGoToJelenet(int goToJelenet) {
+        this.goToJelenet = goToJelenet;
     }
 
     public boolean equals(final Object o) {
@@ -31,7 +32,7 @@ public class ValidDirsDTO {
         final Object this$name = this.getName();
         final Object other$name = other.getName();
         if (this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
-        if (this.getGoToJelent() != other.getGoToJelent()) return false;
+        if (this.getGoToJelenet() != other.getGoToJelenet()) return false;
         return true;
     }
 
@@ -44,11 +45,11 @@ public class ValidDirsDTO {
         int result = 1;
         final Object $name = this.getName();
         result = result * PRIME + ($name == null ? 43 : $name.hashCode());
-        result = result * PRIME + this.getGoToJelent();
+        result = result * PRIME + this.getGoToJelenet();
         return result;
     }
 
     public String toString() {
-        return "ValidDirsDTO(name=" + this.getName() + ", goToJelent=" + this.getGoToJelent() + ")";
+        return "ValidDirsDTO(name=" + this.getName() + ", goToJelent=" + this.getGoToJelenet() + ")";
     }
 }
