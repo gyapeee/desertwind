@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "szoveg": "Kalandod itt véget ér",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "",
+    "isDead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Észak",
+    "Dél",
+    "Kelet",
+    "Nyugat"
+  ],
+  "invalidDirsText": "",
+  "validDirs": [
+  ],
+  "visitedSzoveg": ""
+}

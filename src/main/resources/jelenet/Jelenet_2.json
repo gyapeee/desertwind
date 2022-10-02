@@ -6,18 +6,18 @@
     "item": ""
   },
   "wait": {
-    "szoveg": "",
-    "isDead": false,
-    "goToJelenet": null
+    "szoveg": "Hát ezt nem kellett volna. A katonák betörik az ajtódat, hogy megnézzék, mért nem jössz már. Mikor meglátnak ott lustálkodni, talpra állítanak és kivonszolnak. A helyszínen agyonlőnek.",
+    "isDead": true,
+    "goToJelenet": 1
   },
   "invalidDirs": [
-    ""
+    "Kelet", "Nyugat", "Dél"
   ],
-  "invalidDirsText": "",
+  "invalidDirsText": "Minduntalan falba ütközöl",
   "validDirs": [
     {
-      "name": "",
-      "goToJelenet": null
+      "name": "Észak",
+      "goToJelenet": 3
     }
   ],
   "visitedSzoveg": ""
