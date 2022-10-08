@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "szoveg": " A Nap most már kezd feljönni a láthatáron. Talán a napsugarak elűzik ezt a fogcsikorgató hideget. Megkezded mindennapi munkádat. Pár óra múlva furcsa zajra leszel figyelmes. Hiába kapod fel a fejed, nem látsz semmit. A zaj erősödni kezd. Most már felismered, ez egy motor hangja. Azaz kb. 200-é. Végre meg is látod a motorosokat. Az út felől jönnek, át a szántón. A katonák fegyvereikhez kapnak, de nemsokára mind holtan fekszenek. A  motorosoknak furcsa fegyvereik vannak, és nagyon hatékonynak tűnnek. A munkások szétrohannak minden égtáj felé. Egyedül te maradsz a helyeden mozdulatlanul. A gépek leállnak, és egy magas, izmos alak (láthatóan a vezér) lép elédbe.  -Ki vagy te? Ezt a kérdést még sohasem tették fel neked. Tanácstalanul állsz. -Mi van? Nincs neved? -Név?-nézel furcsán a motorosra. -Szóval nincs neved. Sorszámod? Most valami derengeni kezd. A katonák mindig C-117-esnek szólítottak. Elmondod ezt hát a vezérnek. Ő érdekesen néz rád, majd megszólal: - Eredj a dolgodra. Ezzel felpattannak motorjaikra és elhajtanak dél felé.",
+  "search": {
+    "szoveg": "A halott katonáknál volt egy csomó fegyver, de te egyiket sem tudod használni.",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "Na ezt nem kellett volna. A hullák elkezdenek rothadni. A bűz olyan elviselhetetlen hogy öngyilkos leszel.",
+    "isDead": true,
+    "goToJelenet": 1
+  },
+  "invalidDirs": [
+    "Észak",
+    "Nyugat",
+    "Kelet"
+  ],
+  "invalidDirsText": "Végtelen szántóföld amerre csak látsz. Nem lenne jó erre menni.",
+  "validDirs": [
+    {
+      "name": "Dél",
+      "goToJelenet": 5
+    }
+  ],
+  "visitedSzoveg": "A mezőn állsz. Körülötted halott katonák fekszenek. Az út dél felé van."
+}

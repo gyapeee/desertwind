@@ -70,7 +70,7 @@ config=StructureConfiguration;
     "showPackageLevels": 3,
     "showDetailedClassStructure": true
   },
-  "rootClass": "com.kodenigaz.desertwind.DesertWind",
+  "rootClass": "DesertWind",
   "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
 }
 diagram meta data end '/

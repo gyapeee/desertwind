@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "szoveg": "A szerény kis kunyhód előtt állsz. Kétoldalt közrefog két gépfegyveres katona, és finoman megkérnek, hogy húzd a beled a földekre. Jobb lesz ha engedelmeskedsz nekik. A szántóföld északra van.",
+  "search": {
+    "szoveg": "Most akarsz nekiállni keresni? Nem ajánlom.",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "A katonák továbbtuszkolnak.",
+    "isDead": false,
+    "goToJelenet": 4
+  },
+  "invalidDirs": [
+    "Dél",
+    "Kelet",
+    "Nyugat"
+  ],
+  "invalidDirsText": "Jobb lesz ha nem erre mész. A katonák ezt nem szívlelnék.",
+  "validDirs": [
+    {
+      "name": "Észak",
+      "goToJelenet": 4
+    }
+  ],
+  "visitedSzoveg": ""
+}

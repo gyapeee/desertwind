@@ -10,7 +10,7 @@ export class StoryBoxService {
   constructor(private http: HttpClient) {
   }
 
-  story() {
-    return this.http.get('http://localhost:8081/story',{ responseType: 'text' });
+  story(id: number) {
+    return this.http.get(`http://localhost:8081/jelenet/${id}`,{ responseType: 'text' });
   }
 }

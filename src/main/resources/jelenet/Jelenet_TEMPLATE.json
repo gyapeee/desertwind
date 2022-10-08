@@ -1,0 +1,24 @@
+{
+  "id": null,
+  "szoveg": "",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "",
+    "isDead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    ""
+  ],
+  "invalidDirsText": "",
+  "validDirs": [
+    {
+      "name": "",
+      "goToJelenet": null
+    }
+  ],
+  "visitedSzoveg": ""
+}
