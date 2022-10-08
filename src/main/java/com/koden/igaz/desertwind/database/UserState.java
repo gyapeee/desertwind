@@ -8,37 +8,34 @@ import javax.persistence.Id;
 @Entity(name = "USERSTATE")
 public class UserState {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+  @Id
+  @GeneratedValue
+  private Long id;
 
-    private Long userId;
+  private Long userId;
 
-    public UserState() {
-    }
+  public UserState() {
+  }
 
 
-    public Long getId() {
-        return id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public Long getUserId() {
-        return userId;
-    }
+  public Long getUserId() {
+    return userId;
+  }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+  public void setUserId(Long userId) {
+    this.userId = userId;
+  }
 
-    @Override
-    public String toString() {
-        return "UserState{" +
-                "id=" + id +
-                ", userId=" + userId +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "UserState{" + "id=" + id + ", userId=" + userId + '}';
+  }
 }

@@ -10,10 +10,10 @@ import java.util.List;
 @Service
 public class UserStateService {
 
-    @Autowired
-    private UserStateRepository userStateRepository;
+  @Autowired
+  private UserStateRepository userStateRepository;
 
-    public List<UserState> list() {
-        return userStateRepository.findAll();
-    }
+  public List<UserState> list() {
+    return userStateRepository.findAll();
+  }
 }
