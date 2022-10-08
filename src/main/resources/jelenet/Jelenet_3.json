@@ -7,7 +7,7 @@
   },
   "wait": {
     "szoveg": "A katonák továbbtuszkolnak.",
-    "isDead": false,
+    "dead": false,
     "goToJelenet": 4
   },
   "invalidDirs": [

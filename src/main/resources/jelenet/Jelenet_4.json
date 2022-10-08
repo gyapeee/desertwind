@@ -7,7 +7,7 @@
   },
   "wait": {
     "szoveg": "Na ezt nem kellett volna. A hullák elkezdenek rothadni. A bűz olyan elviselhetetlen hogy öngyilkos leszel.",
-    "isDead": true,
+    "dead": true,
     "goToJelenet": 1
   },
   "invalidDirs": [

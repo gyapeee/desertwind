@@ -1,17 +1,12 @@
 # Desert Wind
+
 Facelifting of old DesertWind game
 
-#Tech
-- Frontend(UI)
-  - Angular
-- Backend 
-  - Java spring boot
-- DB
-  - SQL(MySQL)
-- CI
-  - GitHub CI pipeline?
+# Backend
 
-#Process
-- Branching strategy
-  - naming convention: https://deepsource.io/blog/git-branch-naming-conventions/ 
-  - branch protection: https://carldesouza.com/prevent-direct-merges-to-master-with-branch-protection-in-github/
+- run mvn compile to have the backend built
+- run mvn typescript-generator:generate to have the DTO-s generated at the frontend side
+
+# Frontend
+
+- run frontend/npm run open to have a dev env on localhost:4200
