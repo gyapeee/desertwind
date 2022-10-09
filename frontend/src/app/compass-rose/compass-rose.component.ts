@@ -1,7 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { CompassRoseService } from './compass-rose.service';
 import {JelenetDTO} from "../api/dtos";
-// import { Szoveg } from '../api/Szoveg';
 
 @Component({
   selector: 'app-compass-rose',
@@ -10,18 +9,15 @@ import {JelenetDTO} from "../api/dtos";
 })
 export class CompassRoseComponent implements OnInit {
   @Input() story: JelenetDTO | null = null;
+  @Output() buttonClicked: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(private compassRoseService: CompassRoseService) {}
 
   ngOnInit(): void {}
 
   onMove(event: any) {
-    let buttonText = event.currentTarget.innerText;
-
-    // this.compassRoseService.compassRose(buttonText).subscribe((response: Szoveg) => {
-    //   console.log(response);
-    //   this.compassRoseService.currentStory.next(response.szoveg);
-    // });
+    // emit the text of the button
+    this.buttonClicked.emit(event.currentTarget.innerText);
   }
 
 

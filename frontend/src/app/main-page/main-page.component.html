@@ -14,7 +14,7 @@
       </div>
       <div class="row">
         <app-location-box
-          [story]="story"
+          [locationText]="locationText"
         ></app-location-box>
       </div>
     </div>
@@ -26,6 +26,7 @@
     <div class="row">
       <app-compass-rose
         [story]="story"
+        (buttonClicked)="compassRoseClicked($event)"
       ></app-compass-rose>
     </div>
     <div class="row">

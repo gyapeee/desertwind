@@ -28,8 +28,8 @@ public class BasicApiController {
   @ResponseBody
   public String jelenet(@PathVariable("id") Integer jelenetId, HttpServletRequest request) throws IOException {
     // Add Dictionary for szoveg(id,text,etc)
-    JelenetDTO jelent = JSONConverter.convertToDTOById(jelenetId);
-    return JSONConverter.convertToJSONString(jelent);
+    JelenetDTO jelenet = JSONConverter.convertToDTOById(jelenetId);
+    return JSONConverter.convertToJSONString(jelenet);
   }
 
 }
