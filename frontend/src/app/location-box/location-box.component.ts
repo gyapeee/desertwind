@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { LocationBoxService } from './location-box.service';
+import {JelenetDTO} from "../api/dtos";
 
 @Component({
   selector: 'app-location-box',
@@ -7,6 +8,8 @@ import { LocationBoxService } from './location-box.service';
   styleUrls: ['./location-box.component.css'],
 })
 export class LocationBoxComponent implements OnInit {
+  @Input() story: JelenetDTO | null = null;
+
   constructor(private locationBoxService: LocationBoxService) {}
 
   ngOnInit(): void {

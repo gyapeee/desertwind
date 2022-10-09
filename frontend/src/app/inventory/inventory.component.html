@@ -2,10 +2,9 @@
   <div class="card-body">
     <h5 class="card-title">Inventory</h5>
     <ul class="card-text list-group">
-      <li class="list-group-item">Ring</li>
-      <li class="list-group-item">FlashLight</li>
-      <li class="list-group-item">Watch</li>
-      <li class="list-group-item">Gun</li>
+      <li class="list-group-item"
+        *ngFor="let item of items"
+      >{{item}}</li>
     </ul>
   </div>
 </div>

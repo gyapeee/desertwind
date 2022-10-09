@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { CompassRoseService } from './compass-rose.service';
+import {JelenetDTO} from "../api/dtos";
 // import { Szoveg } from '../api/Szoveg';
 
 @Component({
@@ -8,6 +9,8 @@ import { CompassRoseService } from './compass-rose.service';
   styleUrls: ['./compass-rose.component.css'],
 })
 export class CompassRoseComponent implements OnInit {
+  @Input() story: JelenetDTO | null = null;
+
   constructor(private compassRoseService: CompassRoseService) {}
 
   ngOnInit(): void {}

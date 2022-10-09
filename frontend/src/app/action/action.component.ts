@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ActionService } from './action.service';
+import {JelenetDTO} from "../api/dtos";
 
 @Component({
   selector: 'app-action',
@@ -7,6 +8,8 @@ import { ActionService } from './action.service';
   styleUrls: ['./action.component.css'],
 })
 export class ActionComponent implements OnInit {
+  @Input() story: JelenetDTO | null = null;
+
   constructor(private actionService: ActionService) {}
 
   ngOnInit(): void {

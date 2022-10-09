@@ -2,7 +2,7 @@
   <div class="card-body">
     <h5 class="card-title">Story</h5>
     <p class="card-text">
-      {{story.szoveg}}
+      {{story?.visitedSzoveg ? story?.visitedSzoveg : story?.szoveg}}
     </p>
   </div>
 </div>
