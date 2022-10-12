@@ -16,15 +16,25 @@ export class MainPageComponent implements OnInit {
   story: JelenetDTO | null = null;
   direction: string = "";
   locationText: string = "";
+  items: string[] = [];
 
   ngOnInit(): void {
     this.getStoryFromBackend();
   }
 
-  compassRoseClicked(direction: string){
+  onCompassRoseClicked(direction: string){
+    // TODO remove this line after development
     console.log(direction);
     this.direction = direction;
     this.processDirectionChange();
+  }
+
+  onActionClicked(action: string){
+    // TODO remove this line after development
+    console.log(action);
+    if ("Keresek" === action){
+      this.updateInventory();
+    }
   }
 
   private processDirectionChange() {
@@ -32,7 +42,7 @@ export class MainPageComponent implements OnInit {
       // print the invalidDirsText to location-box
       this.locationText = this.story?.invalidDirsText;
     } else {
-      let newSceneID = this.getnewSceneID(this.direction);
+      let newSceneID = this.getNewSceneID(this.direction);
       if (null == newSceneID){
         // direction cannot be processed
         throw new Error("Direction " + this.direction + " is not found in " +this.story?.validDirs);
@@ -48,11 +58,12 @@ export class MainPageComponent implements OnInit {
       .story(this.sceneId)
       .subscribe((storyBoxText) => {
         this.story = JSON.parse(storyBoxText);
+        // TODO remove this line after development
         console.log(JSON.stringify(this.story));
       });
   }
 
-  private getnewSceneID(direction: string): number | null{
+  private getNewSceneID(direction: string): number | null{
     let newSceneId = null;
     this.story?.validDirs.forEach((validDirDTO) => {
       if (direction === validDirDTO.name){
@@ -60,5 +71,12 @@ export class MainPageComponent implements OnInit {
       }
     })
     return newSceneId;
+  }
+
+  private updateInventory(): void{
+    let newItem = this.story?.search.item;
+    if (newItem && !this.items.includes(newItem)){
+      this.items.push(newItem);
+    }
   }
 }

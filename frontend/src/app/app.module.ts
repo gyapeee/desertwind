@@ -10,7 +10,6 @@ import { CompassRoseComponent } from './compass-rose/compass-rose.component';
 import { StoryBoxComponent } from './story-box/story-box.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { LocationBoxComponent } from './location-box/location-box.component';
-import {InventoryService} from "./inventory/inventory.service";
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
@@ -29,7 +28,6 @@ import {HttpClientModule} from "@angular/common/http";
     NgbModule,
     HttpClientModule
   ],
-  providers: [InventoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
