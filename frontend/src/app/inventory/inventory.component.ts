@@ -14,4 +14,9 @@ export class InventoryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onItemClicked(event: any){
+  // emit the text of the item
+    this.itemClicked.emit(event.currentTarget.innerText);
+  }
 }

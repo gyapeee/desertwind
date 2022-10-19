@@ -17,6 +17,7 @@ export class MainPageComponent implements OnInit {
   direction: string = "";
   locationText: string = "";
   items: string[] = [];
+  selectedItem: string = "";
 
   ngOnInit(): void {
     this.getStoryFromBackend();
@@ -28,6 +29,13 @@ export class MainPageComponent implements OnInit {
     this.direction = direction;
     this.processDirectionChange();
   }
+
+    onInventoryItemClicked(item: string){
+      // TODO remove this line after development
+      console.log(item);
+      // TODO call használ
+
+    }
 
   onActionClicked(action: string){
     // TODO remove this line after development
