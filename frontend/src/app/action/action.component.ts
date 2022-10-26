@@ -12,9 +12,7 @@ export class ActionComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   onAction(event: any){
     this.actionClicked.emit(event.currentTarget.innerText);
