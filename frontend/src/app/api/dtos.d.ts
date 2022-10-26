@@ -36,3 +36,17 @@ export interface WaitDTO {
     goToJelenet: number;
     dead: boolean;
 }
+
+export interface ItemetHasznalDTO {
+    actualisJelenetID: number;
+    selectedItemName:  string;
+}
+
+export interface ItemDTO {
+    name:          string;
+    gotoJelenetID: number;
+    text:          string;
+    used:          boolean;
+}
+
+
