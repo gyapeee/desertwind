@@ -1,0 +1,36 @@
+{
+  "id": 12,
+  "szoveg": "A folyosón állsz. Dél felé olyan 50 méterre egy nagy ajtót látsz. Keletre egy másik kabin ajtaját látod. A folyosó észak felé folytatódik.",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    ""
+  ],
+  "invalidDirsText": "",
+  "validDirs": [
+    {
+      "name": "Nyugat",
+      "goToJelenet": 10
+    },
+    {
+      "name": "Kelet",
+      "goToJelenet": 13
+    },
+    {
+      "name": "Dél",
+      "goToJelenet": 14
+    },
+    {
+      "name": "Észak",
+      "goToJelenet": 15
+    }
+  ],
+  "visitedSzoveg": ""
+}

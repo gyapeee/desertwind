@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "szoveg": "Itt lakom látod, ez az a ház... Csak az ágyad és a kis szekrényed van itt. Az ajtó északra van.",
+  "search": {
+    "szoveg": "A szekrényben megtalálod azt az ősi könyvet, mely generációk óta a családodnál van. Ez az egyetlen személyes tárgyad, amit a katonák nem vettek el tőled. (Mire is tudnának használni egy könyvet? Talán gyújtósank.) Olvasni nem tudod, mivel számodra ismeretlen írásjelek vannak benne. Azért elteszed, hátha jó lesz még valamire.",
+    "item": "Necronomicon"
+  },
+  "wait": {
+    "szoveg": "",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Dél",
+    "Kelet",
+    "Nyugat"
+  ],
+  "invalidDirsText": "Minduntalan falba ütközöl.",
+  "validDirs": [
+    {
+      "name": "Észak",
+      "goToJelenet": 6
+    }
+  ],
+  "visitedSzoveg": ""
+}

@@ -1,23 +1,28 @@
 {
-  "id": null,
-  "szoveg": "",
+  "id": 6,
+  "szoveg": "Megint itt állsz, pedig nincs is még éjjel. Furcsa érzés nappal is látni ezt a helyet. Az emberek bezárkóztak házaikba. Nem értik, mi történt. Mondjuk te se. Déli irányban meglátod a házadat.",
   "search": {
     "szoveg": "",
     "item": ""
   },
   "wait": {
     "szoveg": "",
-    "isDead": false,
+    "dead": false,
     "goToJelenet": null
   },
   "invalidDirs": [
-    ""
+    "Kelet",
+    "Nyugat"
   ],
-  "invalidDirsText": "",
+  "invalidDirsText": "Utadat állják a házak",
   "validDirs": [
     {
-      "name": "",
-      "goToJelenet": null
+      "name": "Észak",
+      "goToJelenet": 5
+    },
+    {
+      "name": "Dél",
+      "goToJelenet": 7
     }
   ],
   "visitedSzoveg": ""
