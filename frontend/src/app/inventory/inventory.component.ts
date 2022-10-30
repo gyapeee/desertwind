@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { InventoryService } from './inventory.service';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
+import {JelenetDTO} from "../api/dtos";
 
 @Component({
   selector: 'app-inventory',
@@ -7,11 +8,15 @@ import { InventoryService } from './inventory.service';
   styleUrls: ['./inventory.component.css'],
 })
 export class InventoryComponent implements OnInit {
-  constructor(private inventoryService: InventoryService) {}
+  @Input() items: string[] = [];
+  @Output() itemClicked: EventEmitter<string> = new EventEmitter<string>();
+  constructor() {}
 
   ngOnInit(): void {
-    this.inventoryService
-      .inventory()
-      .subscribe((data) => console.log(JSON.stringify(data)));
+  }
+
+  onItemClicked(event: any){
+  // emit the text of the item
+    this.itemClicked.emit(event.currentTarget.innerText);
   }
 }

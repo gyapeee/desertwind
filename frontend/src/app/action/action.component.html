@@ -1,7 +1,9 @@
 <div class="container">
-  <a href="#" class="link-primary ms-2 me-2" (click)="onAction($event)">Várakozok</a>
-  <a href="#" class="link-primary ms-2 me-2" (click)="onAction($event)">Keresek</a>
-  <a href="#" class="link-primary ms-2 me-2" (click)="onAction($event)">Használom</a>
-  <a href="#" class="link-primary ms-2 me-2" (click)="onAction($event)">Öngyilkos leszek</a>
-  <a href="#" class="link-primary ms-2 me-2" (click)="onAction($event)">Segítség</a>
+  <a (click)="onAction($event)" *ngIf="story?.id !==9" class="link-primary ms-2 me-2" href="#">Várakozok</a>
+  <a (click)="onAction($event)" *ngIf="story?.id !==9" class="link-primary ms-2 me-2" href="#">Keresek</a>
+  <a (click)="onAction($event)" *ngIf="story?.id !==9" class="link-primary ms-2 me-2" href="#">Használom</a>
+  <a (click)="onAction($event)" *ngIf="story?.id !==9" class="link-primary ms-2 me-2" href="#">Öngyilkos leszek</a>
+  <a (click)="onAction($event)" *ngIf="story?.id !==9" class="link-primary ms-2 me-2" href="#">Segítség</a>
+  <a (click)="onAction($event)" *ngIf="story?.id ===9" class="link-primary ms-2 me-2" href="#">Igen</a>
+  <a (click)="onAction($event)" *ngIf="story?.id ===9" class="link-primary ms-2 me-2" href="#">Nem</a>
 </div>

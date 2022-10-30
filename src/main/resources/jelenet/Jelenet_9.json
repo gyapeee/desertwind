@@ -1,0 +1,24 @@
+{
+  "id": 9,
+  "szoveg": "Amint közelebb mész a fényhez, rengeteg sátrat látsz. Mellettük az ismerős motorok parkolnak. Gyanútlanul közelebb mész. Egyszer csak a bozótból eléd ugrik egy ember és rád szegezi géppuskáját. Kiált a többieknek, mire jön öt másik őr és elvezetnek a legnagyobb sátorhoz. A sátorban egy nagy asztalt látsz, körülötte 5-6 ember áll és valamin vitatkoznak. Az asztalon különböző bábukat látsz. Az egyik őröd mond valamit nekik, mire mindenki feléd fordul. Egy vékony, talpig fekete ruhában lévő ember eléd lép és megkérdi: - Hogy kerülsz ide, dolgozó? Elmeséled neki, mi történt a mai napon. Erre a feketeruhás így szól: - Elvettük a megélhetésedet. Az uralkodó emberei nem látnak el többé élelemmel. Ezt megértjük. Felkínáljuk neked a lehetőséget, hogy beállj közénk. Így van esélyed a túlélésre. Döntsél: velünk tartasz vagy nem?",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    ""
+  ],
+  "invalidDirsText": "",
+  "validDirs": [
+    {
+      "name": "",
+      "goToJelenet": null
+    }
+  ],
+  "visitedSzoveg": ""
+}

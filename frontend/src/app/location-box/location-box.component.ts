@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { LocationBoxService } from './location-box.service';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-location-box',
@@ -7,13 +6,11 @@ import { LocationBoxService } from './location-box.service';
   styleUrls: ['./location-box.component.css'],
 })
 export class LocationBoxComponent implements OnInit {
-  constructor(private locationBoxService: LocationBoxService) {}
+  @Input() locationText: string | null = null;
+
+  constructor() {}
 
   ngOnInit(): void {
-//     this.locationBoxService
-//       .location()
-//       .subscribe((locationBoxText) =>
-//         console.log(JSON.stringify(locationBoxText))
-//       );
+
   }
 }

@@ -7,7 +7,7 @@
   },
   "wait": {
     "szoveg": "",
-    "isDead": false,
+    "dead": false,
     "goToJelenet": null
   },
   "invalidDirs": [

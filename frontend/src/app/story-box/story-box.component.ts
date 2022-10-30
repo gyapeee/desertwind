@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CompassRoseService } from '../compass-rose/compass-rose.service';
+import {Component, Input, OnInit} from '@angular/core';
 import { StoryBoxService } from './story-box.service';
+import { JelenetDTO } from '../api/dtos';
 
 @Component({
   selector: 'app-story-box',
@@ -8,24 +8,10 @@ import { StoryBoxService } from './story-box.service';
   styleUrls: ['./story-box.component.css'],
 })
 export class StoryBoxComponent implements OnInit {
-  sceneId: number = 2;
-  story: string ="";
+  @Input() story: JelenetDTO | null = null;
 
-  constructor(private storyBoxService: StoryBoxService, private compassRoseService: CompassRoseService) {}
+  constructor(private storyBoxService: StoryBoxService) {}
 
   ngOnInit(): void {
-    this.storyBoxService
-      .story(this.sceneId)
-      .subscribe((storyBoxText) =>
-      {
-        console.log(JSON.stringify(storyBoxText));
-      });
-
-  this.compassRoseService.currentStory.subscribe((story)=> {
-    console.log(story);
-    if (story !== null){
-      this.story = story;
-    }
-  });
  }
 }

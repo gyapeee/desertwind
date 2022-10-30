@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActionService } from './action.service';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {JelenetDTO} from "../api/dtos";
 
 @Component({
   selector: 'app-action',
@@ -7,16 +7,14 @@ import { ActionService } from './action.service';
   styleUrls: ['./action.component.css'],
 })
 export class ActionComponent implements OnInit {
-  constructor(private actionService: ActionService) {}
+  @Input() story: JelenetDTO | null = null;
+  @Output() actionClicked: EventEmitter<string> = new EventEmitter<string>();
 
-  ngOnInit(): void {
+  constructor() {}
 
-  }
+  ngOnInit(): void {}
 
   onAction(event: any){
-    let buttonText = event.currentTarget.innerText;
-    this.actionService.action(buttonText).subscribe( response => {
-      console.log(response);
-    });
+    this.actionClicked.emit(event.currentTarget.innerText);
   }
 }

@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "szoveg": "'A kabinodban vagy. Látsz egy kényelmes ágyat és egy tágas szekrényt. A kijárat kelet felé van.",
+  "search": {
+    "szoveg": "Átkutatod a szekrényt, de nem találsz semmit.",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "Lefekszel aludni. 2 óra múlva ébresztenek.",
+    "dead": false,
+    "goToJelenet": 12
+  },
+  "invalidDirs": [
+    "Észak",
+    "Dél",
+    "Nyugat"
+  ],
+  "invalidDirsText": "Bumm! Csattan a fejed a falon",
+  "validDirs": [
+    {
+      "name": "Kelet",
+      "goToJelenet": 12
+    }
+  ],
+  "visitedSzoveg": ""
+}

@@ -2,14 +2,21 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-3 col-md-6 col-lg-9">
-      <app-story-box></app-story-box>
+      <app-story-box
+        [story]="story"
+      ></app-story-box>
     </div>
     <div class="col-sm-3 col-md-3 col-lg-3">
       <div class="row">
-        <app-inventory></app-inventory>
+        <app-inventory
+          [items]="items"
+          (itemClicked)="onInventoryItemClicked($event)"
+        ></app-inventory>
       </div>
       <div class="row">
-        <app-location-box></app-location-box>
+        <app-location-box
+          [locationText]="locationText"
+        ></app-location-box>
       </div>
     </div>
   </div>
@@ -18,10 +25,16 @@
 <div class="card-footer text-muted">
   <div class="container-fluid">
     <div class="row">
-      <app-compass-rose></app-compass-rose>
+      <app-compass-rose
+        [story]="story"
+        (buttonClicked)="onCompassRoseClicked($event)"
+      ></app-compass-rose>
     </div>
     <div class="row">
-      <app-action></app-action>
+      <app-action
+        [story]="story"
+        (actionClicked)="onActionClicked($event)"
+      ></app-action>
     </div>
   </div>
 </div>

@@ -7,11 +7,13 @@
   },
   "wait": {
     "szoveg": "Hát ezt nem kellett volna. A katonák betörik az ajtódat, hogy megnézzék, mért nem jössz már. Mikor meglátnak ott lustálkodni, talpra állítanak és kivonszolnak. A helyszínen agyonlőnek.",
-    "isDead": true,
+    "dead": true,
     "goToJelenet": 1
   },
   "invalidDirs": [
-    "Kelet", "Nyugat", "Dél"
+    "Kelet",
+    "Nyugat",
+    "Dél"
   ],
   "invalidDirsText": "Minduntalan falba ütközöl",
   "validDirs": [

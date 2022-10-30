@@ -1,7 +1,7 @@
 package com.koden.igaz.desertwind.controller;
 
 import com.koden.igaz.desertwind.dto.jelenet.JelenetDTO;
-import com.koden.igaz.desertwind.util.JSONConverter;
+import com.koden.igaz.desertwind.util.JelenetConverter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,9 +27,8 @@ public class BasicApiController {
   @GetMapping(value = "/jelenet/{id}", produces = "text/plain")
   @ResponseBody
   public String jelenet(@PathVariable("id") Integer jelenetId, HttpServletRequest request) throws IOException {
-    // Add Dictionary for szoveg(id,text,etc)
-    JelenetDTO jelent = JSONConverter.convertToDTOById(jelenetId);
-    return JSONConverter.convertToJSONString(jelent);
+    JelenetDTO jelenet = JelenetConverter.convertToDTOById(jelenetId);
+    return JelenetConverter.convertToJSONString(jelenet);
   }
 
 }
