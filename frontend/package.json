@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "open": "ng serve --open",
-    "build": "ng build",
+    "build": "yarn install && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
