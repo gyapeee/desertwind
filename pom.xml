@@ -102,10 +102,11 @@
                 <executions>
                     <execution>
                         <id>generate-api-dto</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <phase>validate</phase>
+                        <!--                        TODO: DOES NOT GENERATE IN DOCKER CONTAINER, FIX IT-->
+                        <!--                        <goals>-->
+                        <!--                            <goal>generate</goal>-->
+                        <!--                        </goals>-->
+                        <!--                        <phase>validate</phase>-->
                     </execution>
                 </executions>
                 <configuration>
