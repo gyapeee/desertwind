@@ -12,7 +12,7 @@
     </parent>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>ISO-8859-2</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.boot.starter.version>2.7.4</spring.boot.starter.version>
         <h2.version>2.0.202</h2.version>
@@ -156,16 +156,16 @@
                 <version>2.6</version>
                 <executions>
                     <execution>
-                        <id>copy-resources</id>
-                        <phase>process-resources</phase>
+                        <id>copy-frontend</id>
+                        <phase>prepare-package</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/classes/static/</outputDirectory>
+                            <outputDirectory>${project.basedir}/src/main/resources/public</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>frontend/dist</directory>
+                                    <directory>frontend/dist/desertwind-client</directory>
                                 </resource>
                             </resources>
                         </configuration>
