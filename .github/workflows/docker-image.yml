@@ -24,4 +24,4 @@ jobs:
         run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/desertwind:$(date +%s)
 
       - name: Docker Push
-        run: docker push ${{secrets.DOCKER_USER}}/desertwind
+        run: docker push ${{secrets.DOCKER_USER}}/desertwind:$(date +%s)
