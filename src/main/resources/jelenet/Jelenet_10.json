@@ -1,18 +1,18 @@
 {
   "id": 10,
-  "szoveg": "'A kabinodban vagy. L√°tsz egy k√©nyelmes √°gyat √©s egy t√°gas szekr√©nyt. A kij√°rat kelet fel√© van.",
+  "szoveg": "'A kabinodban vagy. L·tsz egy kÈnyelmes ·gyat Ès egy t·gas szekrÈnyt. A kij·rat kelet felÈ van.",
   "search": {
-    "szoveg": "√Åtkutatod a szekr√©nyt, de nem tal√°lsz semmit.",
+    "szoveg": "¡tkutatod a szekrÈnyt, de nem tal·lsz semmit.",
     "item": ""
   },
   "wait": {
-    "szoveg": "Lefekszel aludni. 2 √≥ra m√∫lva √©bresztenek.",
+    "szoveg": "Lefekszel aludni. 2 Ûra m˙lva Èbresztenek.",
     "dead": false,
     "goToJelenet": 12
   },
   "invalidDirs": [
-    "√âszak",
-    "D√©l",
+    "…szak",
+    "DÈl",
     "Nyugat"
   ],
   "invalidDirsText": "Bumm! Csattan a fejed a falon",

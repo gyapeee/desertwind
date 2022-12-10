@@ -24,7 +24,7 @@ public class BasicApiController {
     return "Ez itt az inventory";
   }
 
-  @GetMapping(value = "/jelenet/{id}", produces = "text/plain")
+  @GetMapping(value = "/jelenet/{id}", produces = "text/plain;charset=ISO-8859-2")
   @ResponseBody
   public String jelenet(@PathVariable("id") Integer jelenetId, HttpServletRequest request) throws IOException {
     JelenetDTO jelenet = JelenetConverter.convertToDTOById(jelenetId);

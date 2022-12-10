@@ -1,24 +1,24 @@
 {
   "id": 2,
-  "szoveg": "Ãlmosan kelsz fel. A Nap mÃ©g fel se jÅ‘tt az Ã©gre, de nekedmÃ¡r dolgoznod kell. ZÃ¶rgetnek az ajtÃ³don. Sietned kell, vagy ÃºjrafogolytÃ¡borba jutsz, Ã©s  azt biztosan nem Ã©led tÃºl. 30 Ã©vet robotoltÃ¡lmÃ¡r az uralkodÃ³ szolgÃ¡latÃ¡ban, de Ã©rzed, erÅ‘d elhagyott. Ez pedig aztjelenti, nemsokÃ¡ra megvÃ¡lnak tÅ‘led.De most nincs idÅ‘d erre. Menned kell a munkÃ¡ra.Az ajtÃ³ Ã©szak felÃ© van.",
+  "szoveg": "Álmosan kelsz fel. A Nap még fel se jõtt az égre, de nekedmár dolgoznod kell. Zörgetnek az ajtódon. Sietned kell, vagy újrafogolytáborba jutsz, és  azt biztosan nem éled túl. 30 évet robotoltálmár az uralkodó szolgálatában, de érzed, erõd elhagyott. Ez pedig aztjelenti, nemsokára megválnak tõled.De most nincs idõd erre. Menned kell a munkára.Az ajtó észak felé van.",
   "search": {
     "szoveg": "",
     "item": ""
   },
   "wait": {
-    "szoveg": "HÃ¡t ezt nem kellett volna. A katonÃ¡k betÃ¶rik az ajtÃ³dat, hogy megnÃ©zzÃ©k, mÃ©rt nem jÃ¶ssz mÃ¡r. Mikor meglÃ¡tnak ott lustÃ¡lkodni, talpra Ã¡llÃ­tanak Ã©s kivonszolnak. A helyszÃ­nen agyonlÅ‘nek.",
+    "szoveg": "Hát ezt nem kellett volna. A katonák betörik az ajtódat, hogy megnézzék, mért nem jössz már. Mikor meglátnak ott lustálkodni, talpra állítanak és kivonszolnak. A helyszínen agyonlõnek.",
     "dead": true,
     "goToJelenet": 1
   },
   "invalidDirs": [
     "Kelet",
     "Nyugat",
-    "DÃ©l"
+    "Dél"
   ],
-  "invalidDirsText": "Minduntalan falba Ã¼tkÃ¶zÃ¶l",
+  "invalidDirsText": "Minduntalan falba ütközöl",
   "validDirs": [
     {
-      "name": "Ã‰szak",
+      "name": "Észak",
       "goToJelenet": 3
     }
   ],

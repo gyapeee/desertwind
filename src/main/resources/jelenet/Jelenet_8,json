@@ -1,6 +1,6 @@
 {
   "id": 8,
-  "szoveg": "TÃ¶bb Ã³rÃ¡t gyalogolsz. MÃ¡r beesteledett, Ã©s nagyon kezdesz fÃ¡radni. Egyszer csak dÃ©l felÃ© meglÃ¡tsz egy tÃ¡bortÃ¼zet.",
+  "szoveg": "Több órát gyalogolsz. Már beesteledett, és nagyon kezdesz fáradni. Egyszer csak dél felé meglátsz egy tábortüzet.",
   "search": {
     "szoveg": "",
     "item": ""
@@ -11,13 +11,13 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "Ã‰szak",
+    "Észak",
     "Kelet"
   ],
-  "invalidDirsText": "TÃºl sÃ¶tÃ©t van erre. Nem lÃ¡tsz semmit.",
+  "invalidDirsText": "Túl sötét van erre. Nem látsz semmit.",
   "validDirs": [
     {
-      "name": "DÃ©l",
+      "name": "Dél",
       "goToJelenet": 9
     },
         {

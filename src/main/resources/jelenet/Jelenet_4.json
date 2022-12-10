@@ -1,26 +1,26 @@
 {
   "id": 4,
-  "szoveg": " A Nap most mÃ¡r kezd feljÃ¶nni a lÃ¡thatÃ¡ron. TalÃ¡n a napsugarak elÅ±zik ezt a fogcsikorgatÃ³ hideget. Megkezded mindennapi munkÃ¡dat. PÃ¡r Ã³ra mÃºlva furcsa zajra leszel figyelmes. HiÃ¡ba kapod fel a fejed, nem lÃ¡tsz semmit. A zaj erÅ‘sÃ¶dni kezd. Most mÃ¡r felismered, ez egy motor hangja. Azaz kb. 200-Ã©. VÃ©gre meg is lÃ¡tod a motorosokat. Az Ãºt felÅ‘l jÃ¶nnek, Ã¡t a szÃ¡ntÃ³n. A katonÃ¡k fegyvereikhez kapnak, de nemsokÃ¡ra mind holtan fekszenek. A  motorosoknak furcsa fegyvereik vannak, Ã©s nagyon hatÃ©konynak tÅ±nnek. A munkÃ¡sok szÃ©trohannak minden Ã©gtÃ¡j felÃ©. EgyedÃ¼l te maradsz a helyeden mozdulatlanul. A gÃ©pek leÃ¡llnak, Ã©s egy magas, izmos alak (lÃ¡thatÃ³an a vezÃ©r) lÃ©p elÃ©dbe.  -Ki vagy te? Ezt a kÃ©rdÃ©st mÃ©g sohasem tettÃ©k fel neked. TanÃ¡cstalanul Ã¡llsz. -Mi van? Nincs neved? -NÃ©v?-nÃ©zel furcsÃ¡n a motorosra. -SzÃ³val nincs neved. SorszÃ¡mod? Most valami derengeni kezd. A katonÃ¡k mindig C-117-esnek szÃ³lÃ­tottak. Elmondod ezt hÃ¡t a vezÃ©rnek. Å Ã©rdekesen nÃ©z rÃ¡d, majd megszÃ³lal: - Eredj a dolgodra. Ezzel felpattannak motorjaikra Ã©s elhajtanak dÃ©l felÃ©.",
+  "szoveg": " A Nap most már kezd feljönni a láthatáron. Talán a napsugarak elûzik ezt a fogcsikorgató hideget. Megkezded mindennapi munkádat. Pár óra múlva furcsa zajra leszel figyelmes. Hiába kapod fel a fejed, nem látsz semmit. A zaj erõsödni kezd. Most már felismered, ez egy motor hangja. Azaz kb. 200-é. Végre meg is látod a motorosokat. Az út felõl jönnek, át a szántón. A katonák fegyvereikhez kapnak, de nemsokára mind holtan fekszenek. A  motorosoknak furcsa fegyvereik vannak, és nagyon hatékonynak tûnnek. A munkások szétrohannak minden égtáj felé. Egyedül te maradsz a helyeden mozdulatlanul. A gépek leállnak, és egy magas, izmos alak (láthatóan a vezér) lép elédbe.  -Ki vagy te? Ezt a kérdést még sohasem tették fel neked. Tanácstalanul állsz. -Mi van? Nincs neved? -Név?-nézel furcsán a motorosra. -Szóval nincs neved. Sorszámod? Most valami derengeni kezd. A katonák mindig C-117-esnek szólítottak. Elmondod ezt hát a vezérnek. Õ érdekesen néz rád, majd megszólal: - Eredj a dolgodra. Ezzel felpattannak motorjaikra és elhajtanak dél felé.",
   "search": {
-    "szoveg": "A halott katonÃ¡knÃ¡l volt egy csomÃ³ fegyver, de te egyiket sem tudod hasznÃ¡lni.",
+    "szoveg": "A halott katonáknál volt egy csomó fegyver, de te egyiket sem tudod használni.",
     "item": ""
   },
   "wait": {
-    "szoveg": "Na ezt nem kellett volna. A hullÃ¡k elkezdenek rothadni. A bÅ±z olyan elviselhetetlen hogy Ã¶ngyilkos leszel.",
+    "szoveg": "Na ezt nem kellett volna. A hullák elkezdenek rothadni. A bûz olyan elviselhetetlen hogy öngyilkos leszel.",
     "dead": true,
     "goToJelenet": 1
   },
   "invalidDirs": [
-    "Ã‰szak",
+    "Észak",
     "Nyugat",
     "Kelet"
   ],
-  "invalidDirsText": "VÃ©gtelen szÃ¡ntÃ³fÃ¶ld amerre csak lÃ¡tsz. Nem lenne jÃ³ erre menni.",
+  "invalidDirsText": "Végtelen szántóföld amerre csak látsz. Nem lenne jó erre menni.",
   "validDirs": [
     {
-      "name": "DÃ©l",
+      "name": "Dél",
       "goToJelenet": 5
     }
   ],
-  "visitedSzoveg": "A mezÅ‘n Ã¡llsz. KÃ¶rÃ¼lÃ¶tted halott katonÃ¡k fekszenek. Az Ãºt dÃ©l felÃ© van."
+  "visitedSzoveg": "A mezõn állsz. Körülötted halott katonák fekszenek. Az út dél felé van."
 }
