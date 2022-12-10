@@ -11,14 +11,14 @@
     "goToJelenet": 12
   },
   "invalidDirs": [
-    "Észak",
-    "Dél",
-    "Nyugat"
+    "NORTH",
+    "SOUTH",
+    "WEST"
   ],
   "invalidDirsText": "Bumm! Csattan a fejed a falon",
   "validDirs": [
     {
-      "name": "Kelet",
+      "name": "EAST",
       "goToJelenet": 12
     }
   ],

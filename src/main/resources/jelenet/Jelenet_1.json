@@ -11,10 +11,10 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "Észak",
-    "Dél",
-    "Kelet",
-    "Nyugat"
+    "NORTH",
+    "SOUTH",
+    "EAST",
+    "WEST"
   ],
   "invalidDirsText": "",
   "validDirs": [

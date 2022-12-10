@@ -16,8 +16,7 @@ export class CompassRoseComponent implements OnInit {
   ngOnInit(): void {}
 
   onMove(event: any) {
-    // emit the text of the button
-    this.buttonClicked.emit(event.currentTarget.innerText);
+    this.buttonClicked.emit(event.currentTarget.id);
   }
 
 

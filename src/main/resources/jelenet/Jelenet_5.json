@@ -11,20 +11,20 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "Nyugat"
+    "WEST"
   ],
   "invalidDirsText": "Pár óra gyaloglás után inkább visszafordulsz.",
   "validDirs": [
     {
-      "name": "Észak",
+      "name": "NORTH",
       "goToJelenet": 4
     },
     {
-      "name": "Dél",
+      "name": "SOUTH",
       "goToJelenet": 6
     },
     {
-      "name": "Nyugat",
+      "name": "WEST",
       "goToJelenet": 8
     }
   ],

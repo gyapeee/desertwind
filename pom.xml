@@ -86,8 +86,6 @@
             <artifactId>guava</artifactId>
             <version>31.1-jre</version>
         </dependency>
-
-
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
         <!--            <artifactId>spring-boot-starter-security</artifactId>-->
@@ -96,51 +94,35 @@
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <!--                <plugin>-->
-                <!--                    <groupId>org.apache.maven.plugins</groupId>-->
-                <!--                    <artifactId>maven-compiler-plugin</artifactId>-->
-                <!--                    <version>3.8.0</version>-->
-                <!--                    <configuration>-->
-                <!--                        <release>11</release>-->
-                <!--                        <encoding>UTF-8</encoding>-->
-                <!--                    </configuration>-->
-                <!--                </plugin>-->
-                <plugin>
-                    <groupId>cz.habarta.typescript-generator</groupId>
-                    <artifactId>typescript-generator-maven-plugin</artifactId>
-                    <version>${typescript-generator-maven-plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>generate</id>
-                            <goals>
-                                <goal>generate</goal>
-                            </goals>
-                            <phase>process-classes</phase>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <jsonLibrary>jackson2</jsonLibrary>
-                        <classPatterns>
-                            <pattern>com.koden.igaz.desertwind.dto.*</pattern>
-                            <pattern>com.koden.igaz.desertwind.dto.jelenet.*</pattern>
-                        </classPatterns>
-                        <!--                        <classes>-->
-                        <!--                            <class>com.koden.igaz.desertwind.dto.UserDTO</class>-->
-                        <!--                        </classes>-->
-                        <outputFile>frontend/src/app/api/dtos.d.ts</outputFile>
-                        <outputKind>module</outputKind>
-                        <outputFileType>declarationFile</outputFileType>
-                        <!--                        <mapClasses>asClasses</mapClasses>-->
-                        <!--                        <mapEnum>asEnum</mapEnum>-->
-                        <!--                        <nonConstEnums>true</nonConstEnums>-->
-                        <!--                        <optionalProperties>useLibraryDefinition</optionalProperties>-->
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>cz.habarta.typescript-generator</groupId>
+                <artifactId>typescript-generator-maven-plugin</artifactId>
+                <version>${typescript-generator-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-api-dto</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <jsonLibrary>jackson2</jsonLibrary>
+                    <classPatterns>
+                        <pattern>com.koden.igaz.desertwind.dto.*</pattern>
+                        <pattern>com.koden.igaz.desertwind.dto.jelenet.*</pattern>
+                    </classPatterns>
+                    <outputFile>frontend/src/app/api/dtos.d.ts</outputFile>
+                    <outputKind>module</outputKind>
+                    <outputFileType>declarationFile</outputFileType>
+                    <!--                        <mapClasses>asClasses</mapClasses>-->
+                    <mapEnum>asEnum</mapEnum>
+                    <!--                        <nonConstEnums>true</nonConstEnums>-->
+                    <!--                        <optionalProperties>useLibraryDefinition</optionalProperties>-->
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -183,7 +165,7 @@
                         <goals>
                             <goal>install-node-and-yarn</goal>
                         </goals>
-                        <phase>validate</phase>
+                        <phase>initialize</phase>
                     </execution>
                     <execution>
                         <id>yarn install</id>

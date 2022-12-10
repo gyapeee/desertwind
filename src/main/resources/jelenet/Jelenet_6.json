@@ -11,17 +11,17 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "Kelet",
-    "Nyugat"
+    "EAST",
+    "WEST"
   ],
   "invalidDirsText": "Utadat állják a házak",
   "validDirs": [
     {
-      "name": "Észak",
+      "name": "NORTH",
       "goToJelenet": 5
     },
     {
-      "name": "Dél",
+      "name": "SOUTH",
       "goToJelenet": 7
     }
   ],

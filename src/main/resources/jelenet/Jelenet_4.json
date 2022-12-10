@@ -11,14 +11,14 @@
     "goToJelenet": 1
   },
   "invalidDirs": [
-    "Észak",
-    "Nyugat",
-    "Kelet"
+    "NORTH",
+    "WEST",
+    "EAST"
   ],
   "invalidDirsText": "Végtelen szántóföld amerre csak látsz. Nem lenne jó erre menni.",
   "validDirs": [
     {
-      "name": "Dél",
+      "name": "SOUTH",
       "goToJelenet": 5
     }
   ],

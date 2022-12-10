@@ -16,19 +16,19 @@
   "invalidDirsText": "",
   "validDirs": [
     {
-      "name": "Nyugat",
+      "name": "WEST",
       "goToJelenet": 10
     },
     {
-      "name": "Kelet",
+      "name": "EAST",
       "goToJelenet": 13
     },
     {
-      "name": "Dél",
+      "name": "SOUTH",
       "goToJelenet": 14
     },
     {
-      "name": "Észak",
+      "name": "NORTH",
       "goToJelenet": 15
     }
   ],

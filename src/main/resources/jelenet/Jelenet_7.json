@@ -11,14 +11,14 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "Dél",
-    "Kelet",
-    "Nyugat"
+    "SOUTH",
+    "EAST",
+    "WEST"
   ],
   "invalidDirsText": "Minduntalan falba ütközöl.",
   "validDirs": [
     {
-      "name": "Észak",
+      "name": "NORTH",
       "goToJelenet": 6
     }
   ],

@@ -11,14 +11,14 @@
     "goToJelenet": 4
   },
   "invalidDirs": [
-    "Dél",
-    "Kelet",
-    "Nyugat"
+    "SOUTH",
+    "EAST",
+    "WEST"
   ],
   "invalidDirsText": "Jobb lesz ha nem erre mész. A katonák ezt nem szívlelnék.",
   "validDirs": [
     {
-      "name": "Észak",
+      "name": "NORTH",
       "goToJelenet": 4
     }
   ],
