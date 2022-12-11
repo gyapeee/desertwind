@@ -106,7 +106,7 @@
                         <!--                        <goals>-->
                         <!--                            <goal>generate</goal>-->
                         <!--                        </goals>-->
-                        <!--                        <phase>validate</phase>-->
+                        <!--                        <phase>initialize</phase>-->
                     </execution>
                 </executions>
                 <configuration>
@@ -133,6 +133,37 @@
                     <layout>ZIP</layout>
                 </configuration>
             </plugin>
+            <!-- https://medium.com/sparkles-blog/angular-in-the-enterprise-building-angular-apps-through-maven-3ca535152f85 -->
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.12.1</version>
+                <executions>
+                    <execution>
+                        <id>install node and yarn</id>
+                        <goals>
+                            <goal>install-node-and-yarn</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                    </execution>
+                    <execution>
+                        <id>yarn install</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <installDirectory>./</installDirectory>
+                            <workingDirectory>./frontend</workingDirectory>
+                            <arguments>run build</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <nodeVersion>v16.14.0</nodeVersion>
+                    <yarnVersion>v1.22.15</yarnVersion>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -140,7 +171,7 @@
                 <executions>
                     <execution>
                         <id>copy-frontend</id>
-                        <phase>prepare-package</phase>
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
@@ -155,37 +186,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- https://medium.com/sparkles-blog/angular-in-the-enterprise-building-angular-apps-through-maven-3ca535152f85 -->
-            <plugin>
-                <groupId>com.github.eirslett</groupId>
-                <artifactId>frontend-maven-plugin</artifactId>
-                <version>1.12.1</version>
-                <executions>
-                    <execution>
-                        <id>install node and yarn</id>
-                        <goals>
-                            <goal>install-node-and-yarn</goal>
-                        </goals>
-                        <phase>initialize</phase>
-                    </execution>
-                    <execution>
-                        <id>yarn install</id>
-                        <goals>
-                            <goal>yarn</goal>
-                        </goals>
-                        <configuration>
-                            <installDirectory>./</installDirectory>
-                            <workingDirectory>./frontend</workingDirectory>
-                            <arguments>run build</arguments>
-                        </configuration>
-                    </execution>
-                </executions>
-                <configuration>
-                    <nodeVersion>v16.14.0</nodeVersion>
-                    <yarnVersion>v1.22.15</yarnVersion>
-                </configuration>
-            </plugin>
         </plugins>
-
     </build>
 </project>
