@@ -1,6 +1,6 @@
 {
   "id": 6,
-  "szoveg": "Megint itt √°llsz, pedig nincs is m√©g √©jjel. Furcsa √©rz√©s nappal is l√°tni ezt a helyet. Az emberek bez√°rk√≥ztak h√°zaikba. Nem √©rtik, mi t√∂rt√©nt. Mondjuk te se. D√©li ir√°nyban megl√°tod a h√°zadat.",
+  "szoveg": "Megint itt ·llsz, pedig nincs is mÈg Èjjel. Furcsa ÈrzÈs nappal is l·tni ezt a helyet. Az emberek bez·rkÛztak h·zaikba. Nem Èrtik, mi tˆrtÈnt. Mondjuk te se. DÈli ir·nyban megl·tod a h·zadat.",
   "search": {
     "szoveg": "",
     "item": ""
@@ -11,17 +11,17 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "Kelet",
-    "Nyugat"
+    "EAST",
+    "WEST"
   ],
-  "invalidDirsText": "Utadat √°llj√°k a h√°zak",
+  "invalidDirsText": "Utadat ·llj·k a h·zak",
   "validDirs": [
     {
-      "name": "√âszak",
+      "name": "NORTH",
       "goToJelenet": 5
     },
     {
-      "name": "D√©l",
+      "name": "SOUTH",
       "goToJelenet": 7
     }
   ],

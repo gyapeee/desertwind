@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "szoveg": "Kalandod itt véget ér",
+  "szoveg": "Kalandod itt v�get �r",
   "search": {
     "szoveg": "",
     "item": ""
@@ -11,10 +11,10 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "Észak",
-    "Dél",
-    "Kelet",
-    "Nyugat"
+    "NORTH",
+    "SOUTH",
+    "EAST",
+    "WEST"
   ],
   "invalidDirsText": "",
   "validDirs": [

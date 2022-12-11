@@ -1,8 +1,8 @@
 {
   "id": 7,
-  "szoveg": "Itt lakom lÃ¡tod, ez az a hÃ¡z... Csak az Ã¡gyad Ã©s a kis szekrÃ©nyed van itt. Az ajtÃ³ Ã©szakra van.",
+  "szoveg": "Itt lakom látod, ez az a ház... Csak az ágyad és a kis szekrényed van itt. Az ajtó északra van.",
   "search": {
-    "szoveg": "A szekrÃ©nyben megtalÃ¡lod azt az Å‘si kÃ¶nyvet, mely generÃ¡ciÃ³k Ã³ta a csalÃ¡dodnÃ¡l van. Ez az egyetlen szemÃ©lyes tÃ¡rgyad, amit a katonÃ¡k nem vettek el tÅ‘led. (Mire is tudnÃ¡nak hasznÃ¡lni egy kÃ¶nyvet? TalÃ¡n gyÃºjtÃ³sank.) Olvasni nem tudod, mivel szÃ¡modra ismeretlen Ã­rÃ¡sjelek vannak benne. AzÃ©rt elteszed, hÃ¡tha jÃ³ lesz mÃ©g valamire.",
+    "szoveg": "A szekrényben megtalálod azt az õsi könyvet, mely generációk óta a családodnál van. Ez az egyetlen személyes tárgyad, amit a katonák nem vettek el tõled. (Mire is tudnának használni egy könyvet? Talán gyújtósank.) Olvasni nem tudod, mivel számodra ismeretlen írásjelek vannak benne. Azért elteszed, hátha jó lesz még valamire.",
     "item": "Necronomicon"
   },
   "wait": {
@@ -11,14 +11,14 @@
     "goToJelenet": null
   },
   "invalidDirs": [
-    "DÃ©l",
-    "Kelet",
-    "Nyugat"
+    "SOUTH",
+    "EAST",
+    "WEST"
   ],
-  "invalidDirsText": "Minduntalan falba Ã¼tkÃ¶zÃ¶l.",
+  "invalidDirsText": "Minduntalan falba ütközöl.",
   "validDirs": [
     {
-      "name": "Ã‰szak",
+      "name": "NORTH",
       "goToJelenet": 6
     }
   ],

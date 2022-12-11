@@ -1,6 +1,18 @@
 /* tslint:disable */
 /* eslint-disable */
-// Generated using typescript-generator version 3.0.1157 on 2022-10-08 22:08:14.
+// Generated using typescript-generator version 3.0.1157 on 2022-12-10 22:33:59.
+
+export interface ItemDTO {
+    name: string;
+    gotoJelenetID: number;
+    text: string;
+    used: boolean;
+}
+
+export interface ItemetHasznalDTO {
+    actualisJelenetID: number;
+    selectedItemName: string;
+}
 
 export interface UserDTO {
     aktualisJelenetName: string;
@@ -37,16 +49,9 @@ export interface WaitDTO {
     dead: boolean;
 }
 
-export interface ItemetHasznalDTO {
-    actualisJelenetID: number;
-    selectedItemName:  string;
+export const enum Direction {
+    NORTH = "NORTH",
+    SOUTH = "SOUTH",
+    EAST = "EAST",
+    WEST = "WEST",
 }
-
-export interface ItemDTO {
-    name:          string;
-    gotoJelenetID: number;
-    text:          string;
-    used:          boolean;
-}
-
-

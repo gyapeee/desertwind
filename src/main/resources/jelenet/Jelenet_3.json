@@ -1,24 +1,24 @@
 {
   "id": 3,
-  "szoveg": "A szerÃ©ny kis kunyhÃ³d elÅ‘tt Ã¡llsz. KÃ©toldalt kÃ¶zrefog kÃ©t gÃ©pfegyveres katona, Ã©s finoman megkÃ©rnek, hogy hÃºzd a beled a fÃ¶ldekre. Jobb lesz ha engedelmeskedsz nekik. A szÃ¡ntÃ³fÃ¶ld Ã©szakra van.",
+  "szoveg": "A szerény kis kunyhód elõtt állsz. Kétoldalt közrefog két gépfegyveres katona, és finoman megkérnek, hogy húzd a beled a földekre. Jobb lesz ha engedelmeskedsz nekik. A szántóföld északra van.",
   "search": {
-    "szoveg": "Most akarsz nekiÃ¡llni keresni? Nem ajÃ¡nlom.",
+    "szoveg": "Most akarsz nekiállni keresni? Nem ajánlom.",
     "item": ""
   },
   "wait": {
-    "szoveg": "A katonÃ¡k tovÃ¡bbtuszkolnak.",
+    "szoveg": "A katonák továbbtuszkolnak.",
     "dead": false,
     "goToJelenet": 4
   },
   "invalidDirs": [
-    "DÃ©l",
-    "Kelet",
-    "Nyugat"
+    "SOUTH",
+    "EAST",
+    "WEST"
   ],
-  "invalidDirsText": "Jobb lesz ha nem erre mÃ©sz. A katonÃ¡k ezt nem szÃ­vlelnÃ©k.",
+  "invalidDirsText": "Jobb lesz ha nem erre mész. A katonák ezt nem szívlelnék.",
   "validDirs": [
     {
-      "name": "Ã‰szak",
+      "name": "NORTH",
       "goToJelenet": 4
     }
   ],

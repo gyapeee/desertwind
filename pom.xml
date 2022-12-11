@@ -12,7 +12,7 @@
     </parent>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>ISO-8859-2</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.boot.starter.version>2.7.4</spring.boot.starter.version>
         <h2.version>2.0.202</h2.version>
@@ -86,8 +86,6 @@
             <artifactId>guava</artifactId>
             <version>31.1-jre</version>
         </dependency>
-
-
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
         <!--            <artifactId>spring-boot-starter-security</artifactId>-->
@@ -96,51 +94,36 @@
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <!--                <plugin>-->
-                <!--                    <groupId>org.apache.maven.plugins</groupId>-->
-                <!--                    <artifactId>maven-compiler-plugin</artifactId>-->
-                <!--                    <version>3.8.0</version>-->
-                <!--                    <configuration>-->
-                <!--                        <release>11</release>-->
-                <!--                        <encoding>UTF-8</encoding>-->
-                <!--                    </configuration>-->
-                <!--                </plugin>-->
-                <plugin>
-                    <groupId>cz.habarta.typescript-generator</groupId>
-                    <artifactId>typescript-generator-maven-plugin</artifactId>
-                    <version>${typescript-generator-maven-plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>generate</id>
-                            <goals>
-                                <goal>generate</goal>
-                            </goals>
-                            <phase>process-classes</phase>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <jsonLibrary>jackson2</jsonLibrary>
-                        <classPatterns>
-                            <pattern>com.koden.igaz.desertwind.dto.*</pattern>
-                            <pattern>com.koden.igaz.desertwind.dto.jelenet.*</pattern>
-                        </classPatterns>
-                        <!--                        <classes>-->
-                        <!--                            <class>com.koden.igaz.desertwind.dto.UserDTO</class>-->
-                        <!--                        </classes>-->
-                        <outputFile>frontend/src/app/api/dtos.d.ts</outputFile>
-                        <outputKind>module</outputKind>
-                        <outputFileType>declarationFile</outputFileType>
-                        <!--                        <mapClasses>asClasses</mapClasses>-->
-                        <!--                        <mapEnum>asEnum</mapEnum>-->
-                        <!--                        <nonConstEnums>true</nonConstEnums>-->
-                        <!--                        <optionalProperties>useLibraryDefinition</optionalProperties>-->
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>cz.habarta.typescript-generator</groupId>
+                <artifactId>typescript-generator-maven-plugin</artifactId>
+                <version>${typescript-generator-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-api-dto</id>
+                        <!--                        TODO: DOES NOT GENERATE IN DOCKER CONTAINER, FIX IT-->
+                        <!--                        <goals>-->
+                        <!--                            <goal>generate</goal>-->
+                        <!--                        </goals>-->
+                        <!--                        <phase>initialize</phase>-->
+                    </execution>
+                </executions>
+                <configuration>
+                    <jsonLibrary>jackson2</jsonLibrary>
+                    <classPatterns>
+                        <pattern>com.koden.igaz.desertwind.dto.*</pattern>
+                        <pattern>com.koden.igaz.desertwind.dto.jelenet.*</pattern>
+                    </classPatterns>
+                    <outputFile>frontend/src/app/api/dtos.d.ts</outputFile>
+                    <outputKind>module</outputKind>
+                    <outputFileType>declarationFile</outputFileType>
+                    <!--                        <mapClasses>asClasses</mapClasses>-->
+                    <mapEnum>asEnum</mapEnum>
+                    <!--                        <nonConstEnums>true</nonConstEnums>-->
+                    <!--                        <optionalProperties>useLibraryDefinition</optionalProperties>-->
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -149,28 +132,6 @@
                     <mainClass>${main-class}</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/classes/static/</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>frontend/dist</directory>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <!-- https://medium.com/sparkles-blog/angular-in-the-enterprise-building-angular-apps-through-maven-3ca535152f85 -->
             <plugin>
@@ -183,13 +144,14 @@
                         <goals>
                             <goal>install-node-and-yarn</goal>
                         </goals>
-                        <phase>validate</phase>
+                        <phase>generate-sources</phase>
                     </execution>
                     <execution>
                         <id>yarn install</id>
                         <goals>
                             <goal>yarn</goal>
                         </goals>
+                        <phase>process-sources</phase>
                         <configuration>
                             <installDirectory>./</installDirectory>
                             <workingDirectory>./frontend</workingDirectory>
@@ -202,7 +164,28 @@
                     <yarnVersion>v1.22.15</yarnVersion>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>copy-frontend</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/src/main/resources/public</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>frontend/dist/desertwind-client</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
-
     </build>
 </project>

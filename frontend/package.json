@@ -1,11 +1,11 @@
 {
-  "name": "desertwind",
+  "name": "desertwind-client",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "open": "ng serve --open",
-    "build": "yarn install && ng build",
+    "build": "yarn install && ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

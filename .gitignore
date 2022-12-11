@@ -24,3 +24,5 @@ hs_err_pid*
 /target/
 
 /node/
+
+/src/main/resources/public/*

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="ISO-8859-2" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_1.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_10.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_12.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_2.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_3.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_4.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_5.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_6.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_7.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_8,json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_9.json" charset="ISO-8859-2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jelenet/Jelenet_TEMPLATE.json" charset="ISO-8859-2" />
   </component>
 </project>

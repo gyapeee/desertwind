@@ -1,6 +1,6 @@
 {
   "id": 12,
-  "szoveg": "A folyos√≥n √°llsz. D√©l fel√© olyan 50 m√©terre egy nagy ajt√≥t l√°tsz. Keletre egy m√°sik kabin ajtaj√°t l√°tod. A folyos√≥ √©szak fel√© folytat√≥dik.",
+  "szoveg": "A folyosÛn ·llsz. DÈl felÈ olyan 50 mÈterre egy nagy ajtÛt l·tsz. Keletre egy m·sik kabin ajtaj·t l·tod. A folyosÛ Èszak felÈ folytatÛdik.",
   "search": {
     "szoveg": "",
     "item": ""
@@ -16,19 +16,19 @@
   "invalidDirsText": "",
   "validDirs": [
     {
-      "name": "Nyugat",
+      "name": "WEST",
       "goToJelenet": 10
     },
     {
-      "name": "Kelet",
+      "name": "EAST",
       "goToJelenet": 13
     },
     {
-      "name": "D√©l",
+      "name": "SOUTH",
       "goToJelenet": 14
     },
     {
-      "name": "√âszak",
+      "name": "NORTH",
       "goToJelenet": 15
     }
   ],
