@@ -20,10 +20,10 @@
       "name": "Dél",
       "goToJelenet": 9
     },
-        {
-          "name": "Nyugat",
-          "goToJelenet": 5
-        },
+    {
+      "name": "Nyugat",
+      "goToJelenet": 5
+    }
   ],
   "visitedSzoveg": ""
 }

@@ -1,0 +1,24 @@
+{
+  "id": 14,
+  "szoveg": "Egy újabb acélajtó előtt állsz. Észak felé tudsz vissza menni.",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    ""
+  ],
+  "invalidDirsText": "",
+  "validDirs": [
+    {
+      "name": "",
+      "goToJelenet": null
+    }
+  ],
+  "visitedSzoveg": ""
+}

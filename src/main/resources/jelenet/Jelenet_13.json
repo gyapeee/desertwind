@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "szoveg": "Egy másik kabinban vagy. Tök ugyanolyan mint a tiéd. A kabin gazdája mélyen alszik. A kijárat nyugat felé van.",
+  "search": {
+    "szoveg": "Nono! Nem lopunk más tulajdonából!",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "Az újonc hangosan horkol. Ez rohadtul idegesít.",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Észak",
+    "Kelet",
+    "Dél"
+  ],
+  "invalidDirsText": "Otthon is neki szoktál rohanni a falnak?",
+  "validDirs": [
+    {
+      "name": "Nyugat",
+      "goToJelenet": 12
+    }
+  ],
+  "visitedSzoveg": ""
+}
