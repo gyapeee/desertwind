@@ -32,5 +32,7 @@
       "goToJelenet": 15
     }
   ],
-  "visitedSzoveg": ""
+  "visitedSzoveg": "",
+  "useItem": {
+  }
 }

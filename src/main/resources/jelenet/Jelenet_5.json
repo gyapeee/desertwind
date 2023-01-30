@@ -28,5 +28,7 @@
       "goToJelenet": 8
     }
   ],
-  "visitedSzoveg": "Az országút közepén állsz. Észak felé vannak a szántóföldek, délre a falu. Nyugatra és keletre folytatódik a végtelen aszfalt."
+  "visitedSzoveg": "Az országút közepén állsz. Észak felé vannak a szántóföldek, délre a falu. Nyugatra és keletre folytatódik a végtelen aszfalt.",
+  "useItem": {
+  }
 }
