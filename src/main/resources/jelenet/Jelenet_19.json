@@ -1,0 +1,29 @@
+{
+  "id": 19,
+  "szoveg": "Az ebédlőben vagy. Rengeteg asztalt látsz itt, de mindegyik üres. Senki sincs itt. Északra viszont meglátod a konyha bejáratát. Kelet felé van a kijárat.",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "Leülsz egy asztalhoz, de senki sem hoz kaját. Micsoda pofátlanság!",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Nyugat",
+    "Dél"
+  ],
+  "invalidDirsText": "Arra csak a fal van.",
+  "validDirs": [
+    {
+      "name": "Kelet",
+      "goToJelenet": 15
+    },
+    {
+      "name": "Észak",
+      "goToJelenet": 20
+    }
+  ],
+  "visitedSzoveg": ""
+}

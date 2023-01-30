@@ -1,0 +1,29 @@
+{
+  "id": null,
+  "szoveg": "Nem látsz semmit, de tapogatózva továbbjutsz. Nemsokára a folyosó véget ér. Észreveszel egy kilincset.",
+  "search": {
+    "szoveg": "Még magadat se látod! Hogy akarsz itt keresni bármit?",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "Nem félsz a sötétben? Pedig jobb félni mint megijedni.",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Észak",
+    "Dél"
+  ],
+  "invalidDirsText": "Most már legalább tudod, hol a fal.",
+  "validDirs": [
+    {
+      "name": "Nyugat",
+      "goToJelenet": 15
+    },
+    {
+      "name": "Kelet",
+      "goToJelenet": 18
+    }
+  ],
+  "visitedSzoveg": "A sötétben állsz. Erről a helyről a Pitch Dark című film jutna az eszedbe, ha láttad volna valaha."
+}

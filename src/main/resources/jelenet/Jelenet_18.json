@@ -1,0 +1,33 @@
+{
+  "id": 18,
+  "szoveg": "Az ajtó nyikorogva nyílik ki. A rozsdás kilincs a kezedben marad. Egy kis ablakon jön be valamennyi napfény, de nem túl sok. Pókhálók mindenütt. Óriási polcokat látsz, tele könyvekkel, és egy asztalt. Az asztalnál egy őszszakállú öregember alussza az igazak álmát valószínűleg már jó ideje. Nyugat felé tudsz visszamenni.",
+  "search": {
+    "szoveg": "Nagy zajt csapsz, és sikeresen felébreszted az öreget. - Mit keresel itt? Ki vagy te? - néz rád kérdőn. Készségesen elmagyarázol neki mindent, és megkérded tőle hogy hol vagy. - A bázis könyvtárban. Mint láthatod, eléggé kevesen járnak erre. Majd invitál, hogy nézd meg a könyveit.",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "Az öregember csak horkol, csak horkol, csak horkol ...",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Észak",
+    "Kelet",
+    "Dél"
+  ],
+  "invalidDirsText": "Mindenütt csak falak!",
+  "validDirs": [
+    {
+      "name": "Nyugat",
+      "goToJelenet": 17
+    }
+  ],
+  "visitedSzoveg": "",
+  "useItem": {
+    "itemName": "Necronomicon",
+    "notUsedText": "",
+    "destroyItem": true,
+    "usedText": "Eszedbe jut a könyv, amit otthon találtál és megmutatod neki. Kezébe veszi, és lesápad arcáról a mosoly. - Honnan szerezted ezt?? Elmondod hogy a családod‚ volt századok óta. - Ez az őrült arab, Abdul Alhazred rettenetes Necronomiconja! Méghozzá egy arab nyelvű példány! Ezt a könyvet meg kell semmisíteni, mert veszélyt jelent az emberiségre! Hiába ellenkezel, hajthatatlan. A könyvet elteszi egy fiókba. És most viszlát. És kitessékel a könyvtárból.",
+    "gotoJelenet": 17
+  }
+}

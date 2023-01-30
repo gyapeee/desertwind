@@ -1,0 +1,35 @@
+{
+  "id": 14,
+  "szoveg": "Egy újabb acélajtó előtt állsz. Észak felé tudsz vissza menni.",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Kelet",
+    "Nyugat"
+  ],
+  "invalidDirsText": "Nem tudsz erre menni",
+  "validDirs": [
+    {
+      "name": "Észak",
+      "goToJelenet": 12
+    },
+    {
+      "name": "Dél",
+      "needsItem": "kulcs",
+      "gotoJelenet": 16
+    }
+  ],
+  "visitedSzoveg": "",
+  "useItem": {
+    "itemName": "kulcs",
+    "notUsedText": "Az ajtó be van zárva.",
+    "usedText": "A kulccsal ki tudtad nyitni a zárat."
+  }
+}

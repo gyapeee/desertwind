@@ -1,0 +1,32 @@
+{
+  "id": 15,
+  "szoveg": "A folyosó itt kétfelé ágazik. A keleti ág nagyon sötét, szóval nem látsz semmit. A nyugati az ebédlőhöz vezet.",
+  "search": {
+    "szoveg": "",
+    "item": ""
+  },
+  "wait": {
+    "szoveg": "",
+    "dead": false,
+    "goToJelenet": null
+  },
+  "invalidDirs": [
+    "Észak"
+  ],
+  "invalidDirsText": "Ne menj neki a falnak!",
+  "validDirs": [
+    {
+      "name": "Dél",
+      "goToJelenet": 12
+    },
+    {
+      "name": "Kelet",
+      "goToJelenet": 17
+    },
+    {
+      "name": "Nyugat",
+      "goToJelenet": 19
+    }
+  ],
+  "visitedSzoveg": ""
+}
