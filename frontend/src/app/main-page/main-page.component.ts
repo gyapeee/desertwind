@@ -12,6 +12,7 @@ export class MainPageComponent implements OnInit {
   constructor(private storyBoxService:StoryBoxService) {
   }
 
+  sceneTraces: string[] = [];
   sceneId: number = 2;
   story: JelenetDTO | null = null;
   direction: string = "";
@@ -20,7 +21,22 @@ export class MainPageComponent implements OnInit {
   selectedItem: string = "";
 
   ngOnInit(): void {
+    this.initSceneTraces();
     this.getStoryFromBackend();
+  }
+
+  private initSceneTraces(): void{
+      let sceneTraces: string | null =  localStorage.getItem('sceneTraces');
+      let notNullTraces: string = sceneTraces === null ? "" : sceneTraces;
+      if (notNullTraces !== "" ){
+        this.sceneTraces = JSON.parse(notNullTraces);
+      }
+
+      // get the latest scene from the localStorage
+      if (this.sceneTraces.length > 0){
+        this.sceneId = parseInt(this.sceneTraces[this.sceneTraces.length - 1]);
+      }
+
   }
 
   onCompassRoseClicked(direction: string){
@@ -89,6 +105,7 @@ export class MainPageComponent implements OnInit {
         this.story = JSON.parse(storyBoxText);
         // TODO remove this line after development
         console.log(JSON.stringify(this.story));
+        this.updateSceneTraces();
       });
   }
 
@@ -107,5 +124,13 @@ export class MainPageComponent implements OnInit {
     if (newItem && !this.items.includes(newItem)){
       this.items.push(newItem);
     }
+  }
+
+  private updateSceneTraces(): void{
+    // do not add the sceneId to the sceneTraces more than once
+    if ( this.sceneTraces[this.sceneTraces.length - 1] !== this.sceneId.toString() ){
+      this.sceneTraces.push(this.sceneId.toString());
+    }
+    localStorage.setItem('sceneTraces', JSON.stringify(this.sceneTraces));
   }
 }

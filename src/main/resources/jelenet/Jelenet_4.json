@@ -22,5 +22,7 @@
       "goToJelenet": 5
     }
   ],
-  "visitedSzoveg": "A mezõn állsz. Körülötted halott katonák fekszenek. Az út dél felé van."
+  "visitedSzoveg": "A mezõn állsz. Körülötted halott katonák fekszenek. Az út dél felé van.",
+  "useItem": {
+  }
 }

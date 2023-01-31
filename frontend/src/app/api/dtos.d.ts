@@ -2,11 +2,10 @@
 /* eslint-disable */
 // Generated using typescript-generator version 3.0.1157 on 2022-12-10 22:33:59.
 
-export interface ItemDTO {
-    name: string;
-    gotoJelenetID: number;
-    text: string;
-    used: boolean;
+export interface UseItemDTO {
+    itemName: string;
+    notUsedText: string;
+    usedText: string;
 }
 
 export interface ItemetHasznalDTO {
@@ -31,6 +30,7 @@ export interface JelenetDTO {
     invalidDirsText: string;
     validDirs: ValidDirsDTO[];
     visitedSzoveg: string;
+    useItem: UseItemDTO;
 }
 
 export interface SearchDTO {

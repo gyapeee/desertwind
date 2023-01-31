@@ -1,6 +1,9 @@
 package com.koden.igaz.desertwind.dto.jelenet;
 
+import com.koden.igaz.desertwind.dto.UseItemDTO;
+
 import java.util.List;
+import java.util.Objects;
 
 public class JelenetDTO {
   public int id;
@@ -11,6 +14,7 @@ public class JelenetDTO {
   public String invalidDirsText;
   public List<ValidDirsDTO> validDirs;
   public String visitedSzoveg;
+  private UseItemDTO useItem;
 
   public JelenetDTO() {
   }
@@ -80,85 +84,38 @@ public class JelenetDTO {
     this.visitedSzoveg = visitedSzoveg;
   }
 
-  public boolean equals(final Object o) {
-    if (o == this) {
+  public UseItemDTO getUseItem() {
+    return useItem;
+  }
+
+  public void setUseItem(UseItemDTO value) {
+    this.useItem = value;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
       return true;
     }
-    if (!(o instanceof JelenetDTO)) {
+    if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    final JelenetDTO other = (JelenetDTO) o;
-    if (!other.canEqual(this)) {
-      return false;
-    }
-    if (this.getId() != other.getId()) {
-      return false;
-    }
-    final Object this$szoveg = this.getSzoveg();
-    final Object other$szoveg = other.getSzoveg();
-    if (this$szoveg == null ? other$szoveg != null : !this$szoveg.equals(other$szoveg)) {
-      return false;
-    }
-    final Object this$search = this.getSearch();
-    final Object other$search = other.getSearch();
-    if (this$search == null ? other$search != null : !this$search.equals(other$search)) {
-      return false;
-    }
-    final Object this$wait = this.getWait();
-    final Object other$wait = other.getWait();
-    if (this$wait == null ? other$wait != null : !this$wait.equals(other$wait)) {
-      return false;
-    }
-    final Object this$invalidDirs = this.getInvalidDirs();
-    final Object other$invalidDirs = other.getInvalidDirs();
-    if (this$invalidDirs == null ? other$invalidDirs != null : !this$invalidDirs.equals(other$invalidDirs)) {
-      return false;
-    }
-    final Object this$invalidDirsText = this.getInvalidDirsText();
-    final Object other$invalidDirsText = other.getInvalidDirsText();
-    if (this$invalidDirsText == null ?
-            other$invalidDirsText != null : !this$invalidDirsText.equals(other$invalidDirsText)) {
-      return false;
-    }
-    final Object this$validDirs = this.getValidDirs();
-    final Object other$validDirs = other.getValidDirs();
-    if (this$validDirs == null ? other$validDirs != null : !this$validDirs.equals(other$validDirs)) {
-      return false;
-    }
-    final Object this$visitedSzoveg = this.getVisitedSzoveg();
-    final Object other$visitedSzoveg = other.getVisitedSzoveg();
-    return this$visitedSzoveg == null ? other$visitedSzoveg == null : this$visitedSzoveg.equals(other$visitedSzoveg);
+    JelenetDTO that = (JelenetDTO) o;
+    return id == that.id && Objects.equals(szoveg, that.szoveg) && Objects.equals(search, that.search) &&
+           Objects.equals(wait, that.wait) && Objects.equals(invalidDirs, that.invalidDirs) &&
+           Objects.equals(invalidDirsText, that.invalidDirsText) && Objects.equals(validDirs, that.validDirs) &&
+           Objects.equals(visitedSzoveg, that.visitedSzoveg) && Objects.equals(useItem, that.useItem);
   }
 
-  protected boolean canEqual(final Object other) {
-    return other instanceof JelenetDTO;
-  }
-
+  @Override
   public int hashCode() {
-    final int PRIME = 59;
-    int result = 1;
-    result = result * PRIME + this.getId();
-    final Object $szoveg = this.getSzoveg();
-    result = result * PRIME + ($szoveg == null ? 43 : $szoveg.hashCode());
-    final Object $search = this.getSearch();
-    result = result * PRIME + ($search == null ? 43 : $search.hashCode());
-    final Object $wait = this.getWait();
-    result = result * PRIME + ($wait == null ? 43 : $wait.hashCode());
-    final Object $invalidDirs = this.getInvalidDirs();
-    result = result * PRIME + ($invalidDirs == null ? 43 : $invalidDirs.hashCode());
-    final Object $invalidDirsText = this.getInvalidDirsText();
-    result = result * PRIME + ($invalidDirsText == null ? 43 : $invalidDirsText.hashCode());
-    final Object $validDirs = this.getValidDirs();
-    result = result * PRIME + ($validDirs == null ? 43 : $validDirs.hashCode());
-    final Object $visitedSzoveg = this.getVisitedSzoveg();
-    result = result * PRIME + ($visitedSzoveg == null ? 43 : $visitedSzoveg.hashCode());
-    return result;
+    return Objects.hash(id, szoveg, search, wait, invalidDirs, invalidDirsText, validDirs, visitedSzoveg, useItem);
   }
 
+  @Override
   public String toString() {
-    return "JelenetDTO(id=" + this.getId() + ", szoveg=" + this.getSzoveg() + ", search=" + this.getSearch() +
-           ", wait=" + this.getWait() + ", invalidDirs=" + this.getInvalidDirs() + ", invalidDirsText=" +
-           this.getInvalidDirsText() + ", validDirs=" + this.getValidDirs() + ", visitedSzoveg=" +
-           this.getVisitedSzoveg() + ")";
+    return "JelenetDTO{" + "id=" + id + ", szoveg='" + szoveg + '\'' + ", search=" + search + ", wait=" + wait +
+           ", invalidDirs=" + invalidDirs + ", invalidDirsText='" + invalidDirsText + '\'' + ", validDirs=" +
+           validDirs + ", visitedSzoveg='" + visitedSzoveg + '\'' + ", useItem=" + useItem + '}';
   }
 }

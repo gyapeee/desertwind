@@ -19,5 +19,7 @@
   "invalidDirsText": "",
   "validDirs": [
   ],
-  "visitedSzoveg": ""
+  "visitedSzoveg": "",
+  "useItem": {
+  }
 }
